@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yucheng Zhang | Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Yucheng Zhang</h1>
+        <p>Data Scientist | Financial Analysis | AI Enthusiast</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm Yucheng Zhang, a data scientist currently pursuing a Bachelor’s degree in Mathematics with a minor in Computer Science at The University of Texas at Austin. With a GPA of 3.66/4, I have gained expertise in areas such as AI, machine learning, data analysis, and financial systems. I have experience building complex models for financial and bioinformatics data analysis, with strong technical skills in Python, SQL, R, and more.</p>
+    </section>
+
+    <section id="experience">
+        <h2>Work Experience</h2>
+        <div class="job">
+            <h3>Financial Data Development Engineer</h3>
+            <p>Caitong Securities Ltd, Hangzhou, China | July 2024 - August 2024</p>
+            <ul>
+                <li>Utilized advanced SQL techniques to enhance extraction efficiency and developed models for suspicious transaction detection, improving accuracy by 2%.</li>
+                <li>Optimized Oracle securities databases, reducing false positive rates by 1%.</li>
+                <li>Implemented LSTM networks for time series prediction, increasing accuracy by 2%.</li>
+            </ul>
+        </div>
+        
+        <div class="job">
+            <h3>Data Analyst Intern</h3>
+            <p>University of Texas at Austin, Austin, TX | June 2024 - July 2024</p>
+            <ul>
+                <li>Managed and processed 250GB of RNA-seq data, achieving a mapping rate of 98.7%.</li>
+                <li>Utilized AWS cloud services to optimize bioinformatics analysis, reducing costs by 5%.</li>
+                <li>Automated data analysis workflows using Docker, reducing manual intervention by 3%.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>AI-Powered Financial Analysis System</h3>
+            <p>Extracted and analyzed financial reports using FinGPT API, improving stock price prediction accuracy by 3%.</p>
+            <a href="https://github.com/yczhangcc/finanalysis" target="_blank">View Project</a>
+        </div>
+        <div class="project">
+            <h3>Machine Learning for Healthcare</h3>
+            <p>Developed ML models to categorize patients’ emotional states, improving cognitive treatment accuracy by 2%.</p>
+            <a href="https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2024.1358167/full" target="_blank">View Project</a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:2022cicizhang@gmail.com">2022cicizhang@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/yczcecilia" target="_blank">linkedin.com/in/yczcecilia</a></p>
+        <p>GitHub: <a href="https://github.com/yczhangcc" target="_blank">github.com/yczhangcc</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Yucheng Zhang</p>
+    </footer>
+</body>
+</html>
