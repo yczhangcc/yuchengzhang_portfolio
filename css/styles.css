@@ -53,7 +53,13 @@ a:hover {
 }
 
 /* --- Header --- */
-header {
+/* header {
+  text-align: center;
+  padding: 48px 18px 28px;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent);
+} */
+header:not(.hero) {
   text-align: center;
   padding: 48px 18px 28px;
   border-bottom: 1px solid var(--border);
