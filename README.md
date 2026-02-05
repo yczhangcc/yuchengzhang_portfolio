@@ -3,7 +3,7 @@
 This repository contains the source code for my personal portfolio website, built with HTML and CSS and hosted using GitHub Pages.
 
  **Live Website:**  
-https://yczhangcc.github.io/portfolio/
+https://yczhangcc.github.io/yuchengzhang_portfolio/
 
 ---
 
