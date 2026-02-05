@@ -290,13 +290,13 @@ header, section, footer {
    Hero Section
    ========================= */
 
-.hero {
-  position: relative;
+.hero{
+  min-height: 72vh;              /* gives space like a real hero */
+  display: grid;
+  place-items: center;           /* centers horizontally + vertically */
   text-align: center;
-  padding: 70px 20px 55px;
-  overflow: hidden;
+  padding: 70px 20px 50px;
 }
-
 /* background image + overlay */
 .hero::before {
   content: "";
@@ -308,10 +308,15 @@ header, section, footer {
   z-index: 0;
 }
 
-/* keep text above the background */
-.hero-content {
-  position: relative;
+
+.hero-content{
+    position: relative;
   z-index: 1;
+  width: min(980px, 100%);
+  margin: 0 auto;                /* hard center */
+  display: grid;
+  place-items: center;           /* center all children */
+  gap: 18px;
 }
 
 
