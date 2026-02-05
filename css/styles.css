@@ -291,12 +291,15 @@ header, section, footer {
    ========================= */
 
 .hero{
-  min-height: 72vh;              /* gives space like a real hero */
+  position: relative;     /* ✅ makes ::before anchor to hero */
+  overflow: hidden;       /* ✅ prevents background overflow shifting */
+  min-height: 72vh;
   display: grid;
-  place-items: center;           /* centers horizontally + vertically */
+  place-items: center;
   text-align: center;
   padding: 70px 20px 50px;
 }
+
 /* background image + overlay */
 .hero::before {
   content: "";
