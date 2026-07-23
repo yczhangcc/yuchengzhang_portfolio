@@ -1,0 +1,128 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.58in}
+\addtolength{\evensidemargin}{-0.58in}
+\addtolength{\textwidth}{1.16in}
+\addtolength{\topmargin}{-0.66in}
+\addtolength{\textheight}{1.38in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\footskip}{4.1pt}
+
+\titleformat{\section}{\vspace{-8pt}\scshape\raggedright\normalsize}{}{0em}{}[\color{black}\titlerule\vspace{-4pt}]
+
+\newcommand{\resumeItem}[1]{\item\footnotesize{#1\vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.985\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small #2 \\
+      \textit{\small #3} & \small #4 \\
+    \end{tabular*}\vspace{-4pt}
+}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.11in,label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.17in,itemsep=1.5pt,topsep=2pt,label=\raisebox{0.2ex}{\tiny$\bullet$}]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+\begin{document}
+
+\begin{center}
+{\Large\textbf{Yucheng (Cecilia) Zhang}}\\[-1pt]
+\small 737-343-4836 $|$ \href{mailto:ceciliayczhang@gmail.com}{ceciliayczhang@gmail.com} $|$
+\href{https://yczhangcc.github.io/yuchengzhang_portfolio/}{Portfolio} $|$
+\href{https://www.linkedin.com/in/yczcecilia/}{LinkedIn} $|$
+\href{https://github.com/yczhangcc}{GitHub}
+\end{center}
+\vspace{-8pt}
+
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading{Northwestern University}{Aug. 2026 -- May 2028}{M.S. in Computer Science}{Evanston, IL}
+\resumeSubheading{The University of Texas at Austin}{Aug. 2023 -- May 2026}{B.S. in Mathematics, Minor in Computer Science \textbar\ GPA: 3.74/4.00}{Austin, TX}
+\resumeSubHeadingListEnd
+
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.11in,label={},topsep=1pt,itemsep=0pt]
+\footnotesize\item{
+\textbf{ML/AI:} Scikit-learn, PyTorch, TensorFlow, LLM APIs, LangChain, CrewAI, prompt engineering, model evaluation, AI feedback systems \\
+\textbf{Data Science:} Pandas, NumPy, R, MATLAB, MNE, ggplot2, statistics, feature engineering, backtesting, ROC/AUC \\
+\textbf{Data/Cloud:} SQL Server, PostgreSQL, Azure Synapse, Databricks, Delta Lake, AWS, Docker, Power BI, Linux \\
+\textbf{Domains:} Credit risk, fraud detection, bioinformatics, EEG/fNIRS, computer vision, financial analysis
+}
+\end{itemize}
+\vspace{-7pt}
+
+\section{Machine Learning, AI, and Data Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{CodeAssist -- AI Feedback System \href{https://github.com/kiat/codeAssist}{\textbar\ GitHub}}{Aug. 2025 -- Present}{University of Texas at Austin \textbar\ Flask, React, PostgreSQL, OpenAI, Gemini, Claude}{Austin, TX}
+\resumeItemListStart
+\resumeItem{Built assignment-level AI feedback controls, enabling instructors to configure prompt templates, approved context inputs, model settings, request limits, and cooldown rules.}
+\resumeItem{Implemented LLM context-filtering logic so only instructor-approved assignment descriptions, student code, test results, test cases, and student output are sent to AI providers.}
+\resumeItem{Improved multi-provider AI workflows across OpenAI, Gemini, Claude, and local models, including model selection, API configuration, timeout handling, and settings consistency fixes.}
+\resumeItemListEnd
+
+\resumeSubheading{Enterprise Risk Analyst Intern}{May 2025 -- Dec. 2025}{Toyota Industries Commercial Finance \textbar\ Python, SQL, Azure, Power BI}{Dallas, TX}
+\resumeItemListStart
+\resumeItem{Built an end-to-end credit-risk modeling pipeline from SQL Server data, including ETL, feature engineering, Logistic Regression, and Random Forest training.}
+\resumeItem{Engineered features including PayNet inquiries, loan-to-value ratios, account tenure, and asset-segment signals for trucks, trailers, and used-vehicle loans.}
+\resumeItem{Validated models with ROC/AUC, confusion matrices, and feature importance, achieving AUC $>$ 0.82 and improving risk-flagging accuracy by 3--4\%.}
+\resumeItem{Backtested predicted risk buckets against observed outcomes, identifying up to 3.7$\times$ higher default rates in high-risk groups and informing scorecard refinements.}
+\resumeItemListEnd
+
+\resumeSubheading{Researcher \& TA -- Biological Data Analytics}{Jan. 2024 -- Dec. 2024}{University of Texas at Austin \textbar\ R, Linux, AWS, Docker}{Austin, TX}
+\resumeItemListStart
+\resumeItem{Processed 250GB of RNA-seq data with Salmon, RSEM, Trinity, and samtools, achieving a 98.7\% mapping rate across reproducible pipelines.}
+\resumeItem{Performed Voom/Limma differential-expression analysis, identifying 48 key genes across time-series samples with permutation-based FDR.}
+\resumeItem{Automated normalization, PCA, and volcano-plot workflows in R and ggplot2, improving interpretation efficiency by 15\%.}
+\resumeItemListEnd
+
+\resumeSubheading{FinChat -- AI-Powered Financial Analysis System}{Jan. 2023 -- May 2024}{Southern Methodist University \textbar\ Python, FinGPT, LangChain, CrewAI}{Remote}
+\resumeItemListStart
+\resumeItem{Built LLM workflows for financial report analysis, extracting and processing 100+ SEC filings from EDGAR into a scalable data lake.}
+\resumeItem{Integrated FinGPT, LangChain, and CrewAI components for metric extraction, trend detection, and contextual financial interpretation, improving processing accuracy by 3\%.}
+\resumeItemListEnd
+
+\resumeSubheading{Data Scientist Assistant Intern -- Image Restoration}{Jul. 2023 -- Sep. 2023}{Chinese Academy of Sciences \textbar\ TensorFlow, Cloud, GFPGAN}{Beijing, China}
+\resumeItemListStart
+\resumeItem{Deployed image restoration modules on Alibaba Cloud via SSH, implementing VAE loss, Gaussian filters, and LSGAN functions for scalable reconstruction workflows.}
+\resumeItem{Constructed a TensorFlow 2 CNN, split 3.4k images into train/validation/test sets, and achieved 80\% accuracy across 5 image categories.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Research Projects and Publications}
+\resumeSubHeadingListStart
+\resumeSubheading{Neuroengineering Lab -- Machine Learning Research Assistant}{Jan. 2023 -- May 2024}{Python, MATLAB, MNE, RF, SVM, KNN, XGBoost}{Remote}
+\resumeItemListStart
+\resumeItem{Processed 35GB of EEG/fNIRS data for signal cleaning, feature extraction, connectivity analysis, and statistical testing; contributed to Frontiers and IEEE publications.}
+\resumeItem{Evaluated emotion-recognition models using RF, SVM, KNN, and XGBoost, strengthening experimental design, biomarker analysis, and applied ML research writing.}
+\resumeItemListEnd
+\resumeSubheading{Kiwifruit Quality Grading -- Machine Learning Member \href{https://doi.org/10.1016/j.eswa.2025.129507}{\textbar\ Paper}}{Aug. 2022 -- May 2024}{Computer Vision, Feature Fusion, Model Evaluation}{Published 2025}
+\resumeItemListStart
+\resumeItem{Contributed to image-based grading with color, texture, shape, and fusion features; benchmarked models for a paper published in \textit{Expert Systems with Applications}.}
+\resumeItem{Compared feature combinations to optimize grading accuracy and interpret model behavior for the paper's ML methodology section.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Selected Publications}
+\begin{itemize}[leftmargin=0.17in,itemsep=1pt,topsep=2pt,label=\raisebox{0.2ex}{\tiny$\bullet$}]
+\resumeItem{\href{https://doi.org/10.1016/j.eswa.2025.129507}{\textit{Expert Systems with Applications} (2025)}: kiwifruit quality grading using image multi-feature fusion and ResTNet.}
+\resumeItem{\href{https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2024.1358167/full}{\textit{Frontiers in Neurology} (2024)} and \href{https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1269359/full}{\textit{Frontiers in Neuroscience} (2023)}: EEG/fNIRS cognitive impairment and digital therapy studies.}
+\end{itemize}
+\vspace{-6pt}
+
+\end{document}

@@ -1,0 +1,120 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.58in}
+\addtolength{\evensidemargin}{-0.58in}
+\addtolength{\textwidth}{1.16in}
+\addtolength{\topmargin}{-0.66in}
+\addtolength{\textheight}{1.38in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\footskip}{4.1pt}
+
+\titleformat{\section}{\vspace{-8pt}\scshape\raggedright\normalsize}{}{0em}{}[\color{black}\titlerule\vspace{-4pt}]
+
+\newcommand{\resumeItem}[1]{\item\footnotesize{#1\vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.985\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small #2 \\
+      \textit{\small #3} & \small #4 \\
+    \end{tabular*}\vspace{-4pt}
+}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.11in,label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.17in,itemsep=1.5pt,topsep=2pt,label=\raisebox{0.2ex}{\tiny$\bullet$}]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+\begin{document}
+
+\begin{center}
+{\Large\textbf{Yucheng (Cecilia) Zhang}}\\[-1pt]
+\small 737-343-4836 $|$ \href{mailto:ceciliayczhang@gmail.com}{ceciliayczhang@gmail.com} $|$
+\href{https://yczhangcc.github.io/yuchengzhang_portfolio/}{Portfolio} $|$
+\href{https://www.linkedin.com/in/yczcecilia/}{LinkedIn} $|$
+\href{https://github.com/yczhangcc}{GitHub}
+\end{center}
+\vspace{-8pt}
+
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading{Northwestern University}{Aug. 2026 -- May 2028}{M.S. in Computer Science}{Evanston, IL}
+\resumeSubheading{The University of Texas at Austin}{Aug. 2023 -- May 2026}{B.S. in Mathematics, Minor in Computer Science \textbar\ GPA: 3.74/4.00}{Austin, TX}
+\resumeSubHeadingListEnd
+
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.11in,label={},topsep=1pt,itemsep=0pt]
+\footnotesize\item{
+\textbf{Languages:} Python, Java, JavaScript, TypeScript, SQL, R \\
+\textbf{Backend/Web:} React, Flask, Node.js, REST APIs, SQLAlchemy, Alembic, Pytest, Jest \\
+\textbf{Data/Cloud:} PostgreSQL, SQL Server, Azure Synapse, Databricks, Docker, Git, Power BI \\
+\textbf{AI Integrations:} OpenAI, Gemini, Claude, LLM APIs, prompt templates, context filtering, AI feedback systems
+}
+\end{itemize}
+\vspace{-7pt}
+
+\section{Software Engineering Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{CodeAssist -- Software Engineer / Researcher \href{https://github.com/kiat/codeAssist}{\textbar\ GitHub}}{Aug. 2025 -- Present}{University of Texas at Austin \textbar\ React, Flask, PostgreSQL, Docker}{Austin, TX}
+\resumeItemListStart
+\resumeItem{Built assignment-level AI feedback controls, enabling instructors to configure prompt templates, approved inputs, model settings, request limits, and cooldown rules per assignment.}
+\resumeItem{Developed Flask REST APIs with backend validation, JSON serialization, SQLAlchemy models, Alembic migrations, and instructor/TA authorization safeguards.}
+\resumeItem{Implemented LLM context-filtering logic so only instructor-approved assignment descriptions, student code, tests, results, and output are sent to AI providers.}
+\resumeItem{Improved multi-provider workflows across OpenAI, Gemini, Claude, and local models, including model selection, timeout handling, API configuration, and settings consistency fixes.}
+\resumeItem{Created backend stress-testing tools with safe local runners, health checks, structured JSON reports, cleanup options, and documentation for enrollment, submissions, grading, and CRUD workflows.}
+\resumeItemListEnd
+
+\resumeSubheading{Enterprise Risk Analyst Intern}{May 2025 -- Dec. 2025}{Toyota Industries Commercial Finance \textbar\ Python, SQL, Azure, Power BI}{Dallas, TX}
+\resumeItemListStart
+\resumeItem{Automated monthly credit-risk model refreshes with parameterized SQL and Python workflows connected to Power BI, reducing manual reporting effort by 10\%.}
+\resumeItem{Built ETL and reconciliation logic across PayNet and internal loan servicing data, standardizing features including inquiries, LTV ratio, and account tenure.}
+\resumeItem{Delivered Azure and Power BI dashboards for real-time risk tracking across Class 8 trucks, trailers, and used-vehicle loan portfolios.}
+\resumeItem{Validated Logistic Regression and Random Forest outputs with ROC/AUC, confusion matrices, and feature importance to support scorecard refinements.}
+\resumeItemListEnd
+
+\resumeSubheading{Software Engineering Intern -- Customer Analytics}{Nov. 2023 -- Jun. 2024}{Joblogic-X Corporation \textbar\ Python, APIs, Git}{Dallas, TX}
+\resumeItemListStart
+\resumeItem{Engineered a pipeline to scrape and process XHS social-media data and integrate it with transactional order systems for scalable storage and analysis.}
+\resumeItem{Implemented modular Python ranking and clustering algorithms, generating reproducible customer-priority lists for marketing and engagement workflows.}
+\resumeItem{Integrated a KOC scoring module into Meet Fresh's AI-powered chatbot through REST APIs, improving personalization and product usability.}
+\resumeItem{Maintained Git-based deployment workflows to keep the codebase reproducible, cross-platform, and ready for future extensions.}
+\resumeItemListEnd
+
+\resumeSubheading{Financial Data Development Engineer -- Fraud Detection}{Jul. 2024 -- Aug. 2024}{Caitong Securities Ltd \textbar\ SQL, Oracle, Stored Procedures}{Hangzhou, China}
+\resumeItemListStart
+\resumeItem{Designed SQL ETL pipelines processing 10M+ daily transactions with window functions, subqueries, and stored procedures, improving extraction efficiency by 5\%.}
+\resumeItem{Built modular fraud-detection logic and a customer risk-scoring engine from transactional and behavioral streams, reducing false positives by 2\%.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Selected Project}
+\resumeSubHeadingListStart
+\resumeSubheading{Echo Prototype -- Interactive Voice Simulation}{2026}{Next.js, TypeScript, OpenAI API, Browser TTS}{Personal Project}
+\resumeItemListStart
+\resumeItem{Built an event-driven web app that generates context-aware voice responses from user actions, pauses, errors, and task switching; implemented session state, trigger rules, audio cooldowns, and API-based generation.}
+\resumeItem{Implemented front-end session controls, asynchronous response handling, and browser TTS playback so generated feedback stays responsive, non-repetitive, and tied to user behavior.}
+\resumeItem{Structured reusable prompt and event logic for task switching, error states, and idle moments, creating a foundation for future AI assistant prototypes.}
+\resumeItemListEnd
+
+\resumeSubheading{Data Scientist Assistant Intern -- Image Restoration}{Jul. 2023 -- Sep. 2023}{Chinese Academy of Sciences \textbar\ TensorFlow, Cloud, GFPGAN}{Beijing, China}
+\resumeItemListStart
+\resumeItem{Deployed image-restoration modules on Alibaba Cloud via SSH, implementing VAE loss, Gaussian filters, and LSGAN functions for scalable reconstruction workflows.}
+\resumeItem{Built a TensorFlow 2 CNN on 3.4k train/validation/test images, achieved 80\% accuracy across 5 categories, and integrated GFPGAN APIs to reduce processing costs by 5\%.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\end{document}

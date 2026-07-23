@@ -1,0 +1,120 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.58in}
+\addtolength{\evensidemargin}{-0.58in}
+\addtolength{\textwidth}{1.16in}
+\addtolength{\topmargin}{-0.66in}
+\addtolength{\textheight}{1.38in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\footskip}{4.1pt}
+
+\titleformat{\section}{\vspace{-8pt}\scshape\raggedright\normalsize}{}{0em}{}[\color{black}\titlerule\vspace{-4pt}]
+
+\newcommand{\resumeItem}[1]{\item\footnotesize{#1\vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.985\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small #2 \\
+      \textit{\small #3} & \small #4 \\
+    \end{tabular*}\vspace{-4pt}
+}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.11in,label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.17in,itemsep=1.5pt,topsep=2pt,label=\raisebox{0.2ex}{\tiny$\bullet$}]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+\begin{document}
+
+\begin{center}
+{\Large\textbf{Yucheng (Cecilia) Zhang}}\\[-1pt]
+\small 737-343-4836 $|$ \href{mailto:ceciliayczhang@gmail.com}{ceciliayczhang@gmail.com} $|$
+\href{https://yczhangcc.github.io/yuchengzhang_portfolio/}{Portfolio} $|$
+\href{https://www.linkedin.com/in/yczcecilia/}{LinkedIn} $|$
+\href{https://github.com/yczhangcc}{GitHub}
+\end{center}
+\vspace{-8pt}
+
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading{Northwestern University}{Aug. 2026 -- May 2028}{M.S. in Computer Science}{Evanston, IL}
+\resumeSubheading{The University of Texas at Austin}{Aug. 2023 -- May 2026}{B.S. in Mathematics, Minor in Computer Science \textbar\ GPA: 3.74/4.00}{Austin, TX}
+\resumeSubHeadingListEnd
+\vspace{-3pt}
+\footnotesize{\textbf{Relevant Coursework:} Stochastic Process, Probability and Statistics, Real Analysis, Data Analytics, Database Systems, Artificial Intelligence}
+\vspace{-5pt}
+
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.11in,label={},topsep=1pt,itemsep=0pt]
+\footnotesize\item{
+\textbf{Analytics/Modeling:} Credit risk, risk modeling, predictive modeling, statistical analysis, feature engineering, backtesting, ROC/AUC, data validation \\
+\textbf{Languages/Tools:} Python, SQL, R, MATLAB, SAS, Power BI, Git, advanced Excel reconciliation \\
+\textbf{Data Platforms:} SQL Server, Oracle, PostgreSQL, Azure Synapse, Databricks, Delta Lake, AWS, Docker \\
+\textbf{Finance Domains:} Credit risk, fraud detection, AML compliance, financial report analysis, SEC filings, customer risk scoring
+}
+\end{itemize}
+\vspace{-7pt}
+
+\section{Quantitative Analytics and Financial Data Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{Enterprise Risk Analyst Intern}{May 2025 -- Dec. 2025}{Toyota Industries Commercial Finance \textbar\ Python, SQL Server, Azure, Power BI}{Dallas, TX}
+\resumeItemListStart
+\resumeItem{Built an end-to-end credit risk modeling pipeline from raw SQL Server data, including ETL, feature engineering, Logistic Regression, and Random Forest training.}
+\resumeItem{Engineered credit risk features including PayNet inquiries, loan-to-value ratios, account tenure, asset segments, and loan servicing attributes for trucks, trailers, and used-vehicle portfolios.}
+\resumeItem{Validated model performance with ROC/AUC, confusion matrices, and feature importance, achieving AUC $>$ 0.82 and improving risk-flagging accuracy by 3--4\%.}
+\resumeItem{Backtested predicted risk buckets against observed outcomes, identifying up to 3.7$\times$ higher default rates in high-risk groups and informing credit scorecard segmentation refinements.}
+\resumeItem{Automated monthly model refreshes with parameterized SQL and Python workflows connected to Power BI dashboards, reducing manual reporting effort by 10\% and enabling real-time risk tracking.}
+\resumeItemListEnd
+
+\resumeSubheading{Financial Data Development Engineer -- Fraud Detection}{Jul. 2024 -- Aug. 2024}{Caitong Securities Ltd \textbar\ SQL, Oracle, Stored Procedures}{Hangzhou, China}
+\resumeItemListStart
+\resumeItem{Designed SQL ETL pipelines processing 10M+ daily transactions with window functions, subqueries, and stored procedures, improving extraction efficiency by 5\%.}
+\resumeItem{Implemented automated fraud-detection logic with parameterized thresholds and modular stored procedures, reducing false positives by 2\% and improving reliability.}
+\resumeItem{Developed a customer risk scoring engine by integrating transactional and behavioral data streams, enhancing fraud detection precision and supporting AML compliance.}
+\resumeItemListEnd
+
+\resumeSubheading{FinChat -- AI-Powered Financial Analysis System}{Jan. 2023 -- May 2024}{Southern Methodist University \textbar\ Python, FinGPT, LangChain, CrewAI}{Remote}
+\resumeItemListStart
+\resumeItem{Built ETL pipelines to extract and process 100+ SEC filings from EDGAR, structuring unstructured financial data into a scalable data lake for metric extraction and trend detection.}
+\resumeItem{Implemented LangChain and CrewAI workflows for contextual financial interpretation, improving data processing accuracy by 3\% and reducing manual analysis time.}
+\resumeItem{Collaborated with a cross-university team to support LLM-based financial report analysis for scalable analysis of company filings.}
+\resumeItemListEnd
+
+\resumeSubheading{Software Engineering Intern -- Customer Analytics}{Nov. 2023 -- Jun. 2024}{Joblogic-X Corporation \textbar\ Python, APIs, Git}{Dallas, TX}
+\resumeItemListStart
+\resumeItem{Integrated social-media and transactional order data into a scalable customer analytics pipeline for data-driven marketing and engagement strategy.}
+\resumeItem{Implemented Python ranking and clustering algorithms, producing prioritized customer lists and reproducible analytics outputs for downstream chatbot workflows.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Additional Quantitative Research}
+\resumeSubHeadingListStart
+\resumeSubheading{Researcher \& TA -- Biological Data Analytics}{Jan. 2024 -- Dec. 2024}{University of Texas at Austin \textbar\ R, Linux, AWS, Docker}{Austin, TX}
+\resumeItemListStart
+\resumeItem{Processed 250GB of RNA-seq data, performed Voom/Limma differential-expression analysis, identified 48 key genes, and automated PCA/volcano-plot workflows in R.}
+\resumeItem{Applied reproducible data pipelines and statistical analysis across large datasets, improving processing speed by 6\% and interpretation efficiency by 15\%.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Selected Publications}
+\begin{itemize}[leftmargin=0.17in,itemsep=1pt,topsep=2pt,label=\raisebox{0.2ex}{\tiny$\bullet$}]
+\resumeItem{Coauthored 5 publications across machine learning, neuroengineering, computer vision, and social media analysis, including \href{https://doi.org/10.1016/j.eswa.2025.129507}{\textit{Expert Systems with Applications}}, \textit{Frontiers in Neurology}, \textit{Frontiers in Neuroscience}, and IEEE ICIPCA.}
+\end{itemize}
+\vspace{-6pt}
+
+\end{document}
