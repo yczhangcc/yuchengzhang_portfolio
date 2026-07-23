@@ -6,6 +6,11 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 
+\ifdefined\pdfgentounicode
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot{}
@@ -62,7 +67,7 @@
 \textbf{Languages:} Python, Java, JavaScript, TypeScript, SQL, R \\
 \textbf{Backend/Web:} React, Flask, Node.js, REST APIs, SQLAlchemy, Alembic, Pytest, Jest \\
 \textbf{Data/Cloud:} PostgreSQL, SQL Server, Azure Synapse, Databricks, Docker, Git, Power BI \\
-\textbf{AI Integrations:} OpenAI, Gemini, Claude, LLM APIs, prompt templates, context filtering, AI feedback systems
+\textbf{AI Integration:} OpenAI, Gemini, Claude, LLM APIs, prompt configuration, context filtering, multi-provider routing
 }
 \end{itemize}
 \vspace{-7pt}
@@ -71,33 +76,33 @@
 \resumeSubHeadingListStart
 \resumeSubheading{CodeAssist -- Software Engineer / Researcher \href{https://github.com/kiat/codeAssist}{\textbar\ GitHub}}{Aug. 2025 -- Present}{University of Texas at Austin \textbar\ React, Flask, PostgreSQL, Docker}{Austin, TX}
 \resumeItemListStart
-\resumeItem{Built assignment-level AI feedback controls, enabling instructors to configure prompt templates, approved inputs, model settings, request limits, and cooldown rules per assignment.}
+\resumeItem{Built assignment-level AI feedback controls for prompt templates, context permissions, model settings, request limits, and cooldown policies per assignment.}
 \resumeItem{Developed Flask REST APIs with backend validation, JSON serialization, SQLAlchemy models, Alembic migrations, and instructor/TA authorization safeguards.}
-\resumeItem{Implemented LLM context-filtering logic so only instructor-approved assignment descriptions, student code, tests, results, and output are sent to AI providers.}
-\resumeItem{Improved multi-provider workflows across OpenAI, Gemini, Claude, and local models, including model selection, timeout handling, API configuration, and settings consistency fixes.}
-\resumeItem{Created backend stress-testing tools with safe local runners, health checks, structured JSON reports, cleanup options, and documentation for enrollment, submissions, grading, and CRUD workflows.}
+\resumeItem{Implemented LLM context-filtering logic so only instructor-approved assignment descriptions, student code, tests, results, and output are sent through provider requests.}
+\resumeItem{Standardized provider and assignment-level settings across OpenAI, Gemini, Claude, and local models, including model selection, API configuration, and timeout handling.}
+\resumeItem{Built local stress-test runners with server health checks, structured JSON reports, cleanup controls, and documented enrollment, submission, grading, and CRUD workflows.}
 \resumeItemListEnd
 
 \resumeSubheading{Enterprise Risk Analyst Intern}{May 2025 -- Dec. 2025}{Toyota Industries Commercial Finance \textbar\ Python, SQL, Azure, Power BI}{Dallas, TX}
 \resumeItemListStart
 \resumeItem{Automated monthly credit-risk model refreshes with parameterized SQL and Python workflows connected to Power BI, reducing manual reporting effort by 10\%.}
 \resumeItem{Built ETL and reconciliation logic across PayNet and internal loan servicing data, standardizing features including inquiries, LTV ratio, and account tenure.}
-\resumeItem{Delivered Azure and Power BI dashboards for real-time risk tracking across Class 8 trucks, trailers, and used-vehicle loan portfolios.}
+\resumeItem{Delivered Azure and Power BI dashboards for recurring risk monitoring across Class 8 trucks, trailers, and used-vehicle loan portfolios.}
 \resumeItem{Validated Logistic Regression and Random Forest outputs with ROC/AUC, confusion matrices, and feature importance to support scorecard refinements.}
 \resumeItemListEnd
 
 \resumeSubheading{Software Engineering Intern -- Customer Analytics}{Nov. 2023 -- Jun. 2024}{Joblogic-X Corporation \textbar\ Python, APIs, Git}{Dallas, TX}
 \resumeItemListStart
-\resumeItem{Engineered a pipeline to scrape and process XHS social-media data and integrate it with transactional order systems for scalable storage and analysis.}
+\resumeItem{Engineered a pipeline to scrape and process XHS social-media data and join it with transactional order systems for customer analytics and repeatable storage.}
 \resumeItem{Implemented modular Python ranking and clustering algorithms, generating reproducible customer-priority lists for marketing and engagement workflows.}
-\resumeItem{Integrated a KOC scoring module into Meet Fresh's AI-powered chatbot through REST APIs, improving personalization and product usability.}
-\resumeItem{Maintained Git-based deployment workflows to keep the codebase reproducible, cross-platform, and ready for future extensions.}
+\resumeItem{Integrated a KOC scoring module into Meet Fresh's customer-facing chatbot through REST APIs, enabling ranked recommendations inside the existing workflow.}
+\resumeItem{Maintained Git-based deployment workflows to keep the codebase reproducible and reviewable across local and remote development environments.}
 \resumeItemListEnd
 
 \resumeSubheading{Financial Data Development Engineer -- Fraud Detection}{Jul. 2024 -- Aug. 2024}{Caitong Securities Ltd \textbar\ SQL, Oracle, Stored Procedures}{Hangzhou, China}
 \resumeItemListStart
-\resumeItem{Designed SQL ETL pipelines processing 10M+ daily transactions with window functions, subqueries, and stored procedures, improving extraction efficiency by 5\%.}
-\resumeItem{Built modular fraud-detection logic and a customer risk-scoring engine from transactional and behavioral streams, reducing false positives by 2\%.}
+\resumeItem{Designed SQL ETL pipelines processing \textbf{10M+ daily transactions} with window functions, subqueries, and stored procedures, improving extraction efficiency by 5\%.}
+\resumeItem{Built modular fraud-detection logic and a customer risk-scoring engine from transactional and behavioral streams, reducing false positives by 2\% in daily monitoring workflows.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
@@ -105,15 +110,15 @@
 \resumeSubHeadingListStart
 \resumeSubheading{Echo Prototype -- Interactive Voice Simulation}{2026}{Next.js, TypeScript, OpenAI API, Browser TTS}{Personal Project}
 \resumeItemListStart
-\resumeItem{Built an event-driven web app that generates context-aware voice responses from user actions, pauses, errors, and task switching; implemented session state, trigger rules, audio cooldowns, and API-based generation.}
-\resumeItem{Implemented front-end session controls, asynchronous response handling, and browser TTS playback so generated feedback stays responsive, non-repetitive, and tied to user behavior.}
-\resumeItem{Structured reusable prompt and event logic for task switching, error states, and idle moments, creating a foundation for future AI assistant prototypes.}
+\resumeItem{Built an event-driven Next.js app that generated context-aware voice responses from pauses, errors, skipped fields, and task switching using session state, browser TTS, and OpenAI APIs.}
+\resumeItem{Designed cooldown, interval, and event-priority logic to prevent repetitive playback while keeping generated responses tied to the current task state.}
+\resumeItem{Modularized prompt templates and event-trigger logic so new voice events and task types could be added without changing the core session controller as requirements changed.}
 \resumeItemListEnd
 
 \resumeSubheading{Data Scientist Assistant Intern -- Image Restoration}{Jul. 2023 -- Sep. 2023}{Chinese Academy of Sciences \textbar\ TensorFlow, Cloud, GFPGAN}{Beijing, China}
 \resumeItemListStart
 \resumeItem{Deployed image-restoration modules on Alibaba Cloud via SSH, implementing VAE loss, Gaussian filters, and LSGAN functions for scalable reconstruction workflows.}
-\resumeItem{Built a TensorFlow 2 CNN on 3.4k train/validation/test images, achieved 80\% accuracy across 5 categories, and integrated GFPGAN APIs to reduce processing costs by 5\%.}
+\resumeItem{Built a TensorFlow 2 CNN on 3.4k train/validation/test images, achieved \textbf{80\% accuracy} across 5 categories, and integrated GFPGAN APIs to reduce processing costs by 5\%.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 

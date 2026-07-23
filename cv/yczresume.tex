@@ -12,6 +12,11 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 
+\ifdefined\pdfgentounicode
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot{}
@@ -43,7 +48,7 @@
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.11in,label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2pt}}
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.17in,itemsep=1.5pt,topsep=2pt,label=\raisebox{0.2ex}{\tiny$\bullet$}]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
 
 \begin{document}
 
@@ -62,16 +67,16 @@
 \resumeSubheading{The University of Texas at Austin}{Aug. 2023 -- May 2026}{B.S. in Mathematics, Minor in Computer Science \textbar\ GPA: 3.74/4.00}{Austin, TX}
 \resumeSubHeadingListEnd
 \vspace{-3pt}
-\footnotesize{\textbf{Relevant Courses:} Data Structure, Stochastic Process, Elements of Software Design, Data Analytics, Database Systems, Discrete Math, Real Analysis, Probability and Statistics, Artificial Intelligence, Elements of Networking}
+\footnotesize{\textbf{Relevant Courses:} Data Structures, Stochastic Processes, Elements of Software Design, Data Analytics, Database Systems, Discrete Math, Real Analysis, Probability and Statistics, Artificial Intelligence, Elements of Networking}
 \vspace{-4pt}
 
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.11in,label={},topsep=1pt,itemsep=0pt]
 \footnotesize\item{
 \textbf{Languages:} Python, Java, JavaScript, TypeScript, SQL, R, MATLAB, SAS \\
-\textbf{Frameworks \& Libraries:} React, Flask, Node.js, Pandas, NumPy, Scikit-learn, PyTorch, TensorFlow, Matplotlib, MNE \\
-\textbf{Databases \& Cloud:} PostgreSQL, SQL Server, Oracle, Azure Synapse, Databricks, Delta Lake, AWS, Docker \\
-\textbf{AI/ML \& Tools:} LLM APIs, OpenAI, Gemini, Claude, LangChain, CrewAI, Git, SQLAlchemy, Alembic, Pytest, Jest, Power BI, REST APIs
+\textbf{Frameworks \& Libraries:} React, Flask, Node.js, REST APIs, Pandas, NumPy, Scikit-learn, PyTorch, TensorFlow, Matplotlib \\
+\textbf{Databases \& Cloud:} PostgreSQL, SQL Server, Oracle, Azure Synapse, Databricks, Delta Lake, AWS, Docker, Power BI \\
+\textbf{AI/ML \& Tools:} LLM APIs, OpenAI, Gemini, Claude, LangChain, CrewAI, MNE, Git, SQLAlchemy, Alembic, Pytest, Jest
 }
 \end{itemize}
 \vspace{-7pt}
@@ -80,16 +85,16 @@
 \resumeSubHeadingListStart
 \resumeSubheading{Enterprise Risk Analyst Intern}{May 2025 -- Dec. 2025}{Toyota Industries Commercial Finance, Inc. \textbar\ Python, SQL Server, Azure, Power BI}{Dallas, TX}
 \resumeItemListStart
-\resumeItem{Developed a full-stack credit risk modeling pipeline from raw SQL Server data, including ETL, feature engineering, Logistic Regression, and Random Forest modeling, improving default prediction accuracy by 3\% and reducing manual effort by 10\%.}
-\resumeItem{Validated models with ROC/AUC, confusion matrices, and feature importance, achieving AUC $>$ 0.82 across Class 8 trucks, trailers, and used-vehicle loans and improving risk flagging accuracy by 3--4\%.}
-\resumeItem{Conducted backtesting by comparing predicted risk buckets against observed outcomes, revealing up to 3.7$\times$ higher default rates in high-risk groups and informing credit scorecard segmentation refinements.}
-\resumeItem{Delivered Azure and Power BI dashboards and used advanced Excel reconciliation to align PayNet data with internal loan servicing systems for consistent reporting and real-time risk tracking.}
+\resumeItem{Built an end-to-end credit risk modeling workflow from SQL Server data, covering ETL, credit-feature engineering, Logistic Regression, Random Forest modeling, validation, and monthly reporting automation.}
+\resumeItem{Validated models with ROC/AUC, confusion matrices, and feature importance, achieving \textbf{AUC $>$ 0.82} across Class 8 trucks, trailers, and used-vehicle loans and improving high-risk case identification by approximately \textbf{3--4\%}.}
+\resumeItem{Conducted backtesting by comparing predicted risk buckets against observed outcomes, revealing up to \textbf{3.7$\times$ higher default rates} in high-risk groups and informing credit scorecard segmentation refinements.}
+\resumeItem{Delivered Azure and Power BI dashboards and used Excel reconciliation to align PayNet records with internal servicing data for recurring truck, trailer, and used-vehicle portfolio risk monitoring.}
 \resumeItemListEnd
 
 \resumeSubheading{Financial Data Development Engineer -- Fraud Detection}{Jul. 2024 -- Aug. 2024}{Caitong Securities Ltd \textbar\ SQL, Oracle, Stored Procedures}{Hangzhou, China}
 \resumeItemListStart
-\resumeItem{Designed and optimized SQL-driven ETL pipelines processing 10M+ daily transactions with window functions, subqueries, and stored procedures, improving extraction efficiency by 5\%.}
-\resumeItem{Implemented automated fraud-detection logic with parameterized thresholds and modular stored procedures, reducing false positives by 2\% and improving reliability for AML compliance workflows.}
+\resumeItem{Designed and optimized SQL-driven ETL pipelines processing \textbf{10M+ daily transactions} with window functions, subqueries, and stored procedures, improving extraction efficiency by 5\%.}
+\resumeItem{Implemented automated fraud-detection logic with parameterized thresholds and modular stored procedures, reducing false positives by 2\% for transaction-monitoring and AML-related workflows.}
 \resumeItem{Developed a customer risk scoring engine by integrating multiple transactional and behavioral data streams, enhancing fraud detection precision and financial data monitoring.}
 \resumeItemListEnd
 
@@ -97,13 +102,13 @@
 \resumeItemListStart
 \resumeItem{Engineered a scalable data pipeline to scrape and process XHS social-media data and integrate it with transactional order systems for customer analytics.}
 \resumeItem{Implemented modular ranking and clustering algorithms in Python, generating reproducible customer-priority lists for marketing and engagement workflows.}
-\resumeItem{Integrated a KOC scoring module into Meet Fresh's AI-powered chatbot through APIs and maintained Git-based deployment workflows for cross-platform extensibility.}
+\resumeItem{Integrated a KOC scoring module into Meet Fresh's customer-facing chatbot through REST APIs and maintained Git-based deployment workflows for reproducible updates.}
 \resumeItemListEnd
 
 \resumeSubheading{Data Scientist Assistant Intern -- Image Restoration}{Jul. 2023 -- Sep. 2023}{Software Engineering Center, Chinese Academy of Sciences \textbar\ TensorFlow, Cloud, GFPGAN}{Beijing, China}
 \resumeItemListStart
 \resumeItem{Deployed image restoration modules on Alibaba Cloud via SSH, implementing VAE loss, Gaussian filters, and LSGAN functions for scalable reconstruction workflows.}
-\resumeItem{Constructed a TensorFlow 2 CNN, partitioned 3.4k images into train/validation/test sets, and achieved 80\% accuracy across 5 image categories.}
+\resumeItem{Constructed a TensorFlow 2 CNN, partitioned 3.4k images into train/validation/test sets, and achieved \textbf{80\% accuracy} across 5 image categories.}
 \resumeItem{Integrated GFPGAN APIs for automated face restoration and color correction, reducing processing costs by 5\% and supporting model-comparison reporting.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
@@ -112,61 +117,67 @@
 \resumeSubHeadingListStart
 \resumeSubheading{CodeAssist Project \href{https://github.com/kiat/codeAssist}{\textbar\ GitHub}}{Aug. 2025 -- Present}{University of Texas at Austin \textbar\ Mentor: Prof. Kia Teymourian \textbar\ React, Flask, PostgreSQL, Docker}{Austin, TX}
 \resumeItemListStart
-\resumeItem{Built assignment-level AI feedback controls, enabling instructors to configure prompt templates, allowed AI inputs, model settings, request limits, and cooldown rules per assignment.}
+\resumeItem{Built assignment-level AI feedback controls, enabling instructors to configure prompt templates, context permissions, model settings, request limits, and cooldown rules per assignment.}
 \resumeItem{Developed Flask REST APIs for AI feedback settings with backend validation, JSON serialization, SQLAlchemy models, Alembic migrations, and instructor/TA authorization safeguards.}
 \resumeItem{Implemented LLM context-filtering logic so only instructor-approved assignment descriptions, student code, test results, test cases, and student output are sent to AI providers.}
-\resumeItem{Improved multi-provider AI workflows across OpenAI, Gemini, Claude, and local models, including model selection, API configuration, timeout handling, and settings consistency fixes.}
+\resumeItem{Standardized provider and assignment-level AI settings across OpenAI, Gemini, Claude, and local models, including model selection, API configuration, and timeout handling.}
 \resumeItemListEnd
 
 \newpage
 
 \resumeSubheading{Researcher \& TA -- Biological Data Analytics}{Jan. 2024 -- Dec. 2024}{University of Texas at Austin \textbar\ Mentor: Prof. Becca Young \textbar\ R, Linux, AWS, Docker}{Austin, TX}
 \resumeItemListStart
-\resumeItem{Processed and analyzed 250GB of RNA-seq data using Linux, Docker, and AWS workflows, improving processing speed by 6\% and reducing storage costs by 5\%.}
-\resumeItem{Applied Salmon, RSEM, Trinity, and samtools for transcript quantification, achieving a 98.7\% mapping rate and ensuring reproducibility across datasets.}
+\resumeItem{Processed and analyzed \textbf{250GB} of RNA-seq data using Linux, Docker, and AWS workflows, improving processing speed by 6\% and reducing storage costs by 5\%.}
+\resumeItem{Applied Salmon, RSEM, Trinity, and samtools for transcript quantification, achieving a \textbf{98.7\% mapping rate} and ensuring reproducibility across datasets.}
 \resumeItem{Performed Voom/Limma differential-expression analysis, identified 48 key genes across time-series samples, and automated normalization, PCA, and volcano-plot workflows in R/ggplot2.}
 \resumeItem{Collaborated as a teaching assistant to train incoming FRI students on reproducible RNA-seq pipelines and data literacy.}
 \resumeItemListEnd
 
 \resumeSubheading{FinChat -- AI-Powered Financial Analysis System}{Jan. 2023 -- May 2024}{Southern Methodist University \textbar\ Mentor: Prof. Labiba Jahan \textbar\ Python, FinGPT, LangChain, CrewAI}{Remote}
 \resumeItemListStart
-\resumeItem{Built LLM workflows for financial report analysis by extracting and processing 100+ SEC filings from EDGAR into a scalable data lake for metric extraction and trend detection.}
-\resumeItem{Implemented LangChain/CrewAI workflows for contextual financial interpretation, improving data processing accuracy by 3\% and reducing manual analysis time.}
+\resumeItem{Built LLM workflows for financial report analysis by extracting and processing 100+ SEC filings from EDGAR into a structured data lake for metric extraction, trend detection, and company-level comparison.}
+\resumeItem{Implemented LangChain/CrewAI workflows for contextual financial interpretation, improving data processing accuracy by 3\% and reducing manual review time for filing analysis.}
+\resumeItem{Collaborated with a cross-university research team to connect FinGPT-based retrieval, filing preprocessing, and financial-question workflows into a reusable analysis prototype.}
 \resumeItemListEnd
 
 \resumeSubheading{Kiwifruit Quality Grading Project -- Machine Learning Member}{Aug. 2022 -- May 2024}{Huazhong Agricultural University \textbar\ Mentor: Prof. Yan Tong \textbar\ Python, Computer Vision}{Remote}
 \resumeItemListStart
-\resumeItem{Contributed to an automated fruit grading pipeline using color, texture, shape, and feature-fusion methods; benchmarked models and analyzed results for the ML methodology section.}
-\resumeItem{Explored distributed system and blockchain integration for kiwifruit traceability, enhancing data reliability and transparency; work published in \textit{Expert Systems with Applications}.}
+\resumeItem{Contributed to an automated fruit grading pipeline using color, texture, shape, and feature-fusion methods; benchmarked model variants and analyzed results for the ML methodology section.}
+\resumeItem{Compared feature combinations to improve grading accuracy and interpretation for research later published in \textit{Expert Systems with Applications}.}
+\resumeItem{Separately explored distributed-ledger approaches for fruit traceability and data provenance in agricultural supply-chain scenarios.}
 \resumeItemListEnd
 
 \resumeSubheading{Machine Learning Research Assistant -- Neuroengineering Lab}{Jan. 2023 -- May 2024}{Remote \textbar\ Mentor: Dr. Kunqiang Qing \textbar\ Python, MATLAB, MNE}{Remote}
 \resumeItemListStart
-\resumeItem{Processed 35GB of multimodal EEG/fNIRS data for signal cleaning, visualization, feature extraction, connectivity analysis, and statistical testing.}
-\resumeItem{Evaluated cognitive patterns and emotion-recognition models using RF, SVM, KNN, and XGBoost, contributing to peer-reviewed work in Frontiers in Neurology, Frontiers in Neuroscience, and IEEE ICIPCA.}
+\resumeItem{Processed \textbf{35GB} of multimodal EEG/fNIRS data for signal cleaning, visualization, feature extraction, connectivity analysis, and statistical testing.}
+\resumeItem{Applied statistical tests and feature-extraction methods to evaluate cognitive impairment patterns and emotion-recognition signals across experimental conditions.}
+\resumeItem{Evaluated RF, SVM, KNN, and XGBoost models, contributing to peer-reviewed work in \textit{Frontiers in Neurology}, \textit{Frontiers in Neuroscience}, and IEEE ICIPCA.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
-\section{Leadership, Community, and Publications}
+\section{Leadership and Community}
 \resumeSubHeadingListStart
 \resumeSubheading{Leader -- Austin Chinese Campus Christian Fellowship}{Aug. 2023 -- Jun. 2026}{University of Texas at Austin}{Austin, TX}
 \resumeItemListStart
 \resumeItem{Organized weekly Bible studies, retreats, hiking trips, and cultural celebrations; coordinated transportation and scheduling to improve group communication and inclusion.}
+\resumeItem{Facilitated small-group discussions and welcomed new members through consistent event planning, follow-up communication, and peer support for students joining the group.}
 \resumeItemListEnd
 \resumeSubheading{Volunteer -- Art From the Streets}{Jan. 2026 -- Present}{Community art programming for artists experiencing homelessness or housing insecurity}{Austin, TX}
 \resumeItemListStart
-\resumeItem{Supported event preparation, artwork organization, and visitor engagement, strengthening service-oriented communication and community outreach.}
+\resumeItem{Supported event preparation, artwork organization, and visitor engagement for community exhibitions featuring artists experiencing homelessness or housing insecurity.}
+\resumeItem{Assisted volunteers and visitors during public art events, helping maintain a respectful and welcoming environment for participating artists and community guests.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
-\vspace{-5pt}
+\section{Publications}
+\vspace{-4pt}
 \begin{itemize}[leftmargin=0.16in,itemsep=1pt,topsep=1pt,label={}]
 \footnotesize{
 \item [1] \href{https://doi.org/10.1016/j.eswa.2025.129507}{Miao, H., Wang, Z., \textbf{\underline{Zhang, Y.}}, ... \& Tong, Y. (2025). New kiwifruit quality grading methods based on image multi-feature fusion and ResTNet model. \textit{Expert Systems with Applications}, 129507.}
 \item [2] \href{https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2024.1358167/full}{Xu, M., \textbf{\underline{Zhang, Y.}}, Zhang, Y., Liu, X., \& Qing, K. (2024). EEG biomarkers analysis in different cognitive impairment after stroke. \textit{Frontiers in Neurology}, 15, 1358167.}
 \item [3] \href{https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1269359/full}{\textbf{\underline{Zhang, Y.}}, Zhang, Y., Jiang, Z., Xu, M., \& Qing, K. (2023). The effect of EEG and fNIRS in digital therapy of Alzheimer's disease. \textit{Frontiers in Neuroscience}, 17, 1269359.}
 \item [4] \href{https://ieeexplore.ieee.org/abstract/document/10257784}{\textbf{\underline{Zhang, Y.}} (2023). EEG-Based on Emotion Recognition Using Machine Learning. \textit{IEEE ICIPCA}, 226--232.}
-\item [5] \href{https://clausiuspress.com/article/8423.html}{Li, D., Zhang, Z., \& \textbf{\underline{Zhang, Y.}} (2023). Public compassion under the mediation of suffering. \textit{Media and Communication Research}, 4(5), 46--58.}
+\item [5] \href{https://clausiuspress.com/article/8423.html}{Li, D., Zhang, Z., \& \textbf{\underline{Zhang, Y.}} (2023). Public compassion under the mediation of suffering: Taking the videos of ``Second Uncle'' on social media as an example. \textit{Media and Communication Research}, 4(5), 46--58.}
 }
 \end{itemize}
 

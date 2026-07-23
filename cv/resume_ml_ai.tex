@@ -6,6 +6,11 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 
+\ifdefined\pdfgentounicode
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot{}
@@ -59,8 +64,9 @@
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.11in,label={},topsep=1pt,itemsep=0pt]
 \footnotesize\item{
-\textbf{ML/AI:} Scikit-learn, PyTorch, TensorFlow, LLM APIs, LangChain, CrewAI, prompt engineering, model evaluation, AI feedback systems \\
-\textbf{Data Science:} Pandas, NumPy, R, MATLAB, MNE, ggplot2, statistics, feature engineering, backtesting, ROC/AUC \\
+\textbf{Machine Learning:} Scikit-learn, PyTorch, TensorFlow, classification, feature engineering, model evaluation, ROC/AUC, backtesting \\
+\textbf{Generative AI:} OpenAI, Gemini, Claude, LangChain, CrewAI, prompt design, context filtering, LLM evaluation \\
+\textbf{Data Science:} Pandas, NumPy, R, MATLAB, MNE, ggplot2, statistics, permutation-based FDR, visualization \\
 \textbf{Data/Cloud:} SQL Server, PostgreSQL, Azure Synapse, Databricks, Delta Lake, AWS, Docker, Power BI, Linux \\
 \textbf{Domains:} Credit risk, fraud detection, bioinformatics, EEG/fNIRS, computer vision, financial analysis
 }
@@ -71,22 +77,22 @@
 \resumeSubHeadingListStart
 \resumeSubheading{CodeAssist -- AI Feedback System \href{https://github.com/kiat/codeAssist}{\textbar\ GitHub}}{Aug. 2025 -- Present}{University of Texas at Austin \textbar\ Flask, React, PostgreSQL, OpenAI, Gemini, Claude}{Austin, TX}
 \resumeItemListStart
-\resumeItem{Built assignment-level AI feedback controls, enabling instructors to configure prompt templates, approved context inputs, model settings, request limits, and cooldown rules.}
+\resumeItem{Built assignment-level AI feedback controls for prompt templates, context permissions, model settings, request limits, and cooldown policies.}
 \resumeItem{Implemented LLM context-filtering logic so only instructor-approved assignment descriptions, student code, test results, test cases, and student output are sent to AI providers.}
-\resumeItem{Improved multi-provider AI workflows across OpenAI, Gemini, Claude, and local models, including model selection, API configuration, timeout handling, and settings consistency fixes.}
+\resumeItem{Standardized multi-provider AI workflows across OpenAI, Gemini, Claude, and local models, including model selection, API configuration, and timeout handling.}
 \resumeItemListEnd
 
 \resumeSubheading{Enterprise Risk Analyst Intern}{May 2025 -- Dec. 2025}{Toyota Industries Commercial Finance \textbar\ Python, SQL, Azure, Power BI}{Dallas, TX}
 \resumeItemListStart
-\resumeItem{Built an end-to-end credit-risk modeling pipeline from SQL Server data, including ETL, feature engineering, Logistic Regression, and Random Forest training.}
+\resumeItem{Built an end-to-end credit-risk modeling pipeline from SQL Server data, spanning ETL, credit-feature engineering, Logistic Regression, Random Forest training, and validation.}
 \resumeItem{Engineered features including PayNet inquiries, loan-to-value ratios, account tenure, and asset-segment signals for trucks, trailers, and used-vehicle loans.}
-\resumeItem{Validated models with ROC/AUC, confusion matrices, and feature importance, achieving AUC $>$ 0.82 and improving risk-flagging accuracy by 3--4\%.}
-\resumeItem{Backtested predicted risk buckets against observed outcomes, identifying up to 3.7$\times$ higher default rates in high-risk groups and informing scorecard refinements.}
+\resumeItem{Validated models with ROC/AUC, confusion matrices, and feature importance, achieving \textbf{AUC $>$ 0.82} and improving high-risk case identification by approximately \textbf{3--4\%}.}
+\resumeItem{Backtested predicted risk buckets against observed outcomes, identifying up to \textbf{3.7$\times$ higher default rates} in high-risk groups and informing credit scorecard refinements.}
 \resumeItemListEnd
 
 \resumeSubheading{Researcher \& TA -- Biological Data Analytics}{Jan. 2024 -- Dec. 2024}{University of Texas at Austin \textbar\ R, Linux, AWS, Docker}{Austin, TX}
 \resumeItemListStart
-\resumeItem{Processed 250GB of RNA-seq data with Salmon, RSEM, Trinity, and samtools, achieving a 98.7\% mapping rate across reproducible pipelines.}
+\resumeItem{Processed \textbf{250GB} of RNA-seq data with Salmon, RSEM, Trinity, and samtools, achieving a \textbf{98.7\% mapping rate} across reproducible pipelines.}
 \resumeItem{Performed Voom/Limma differential-expression analysis, identifying 48 key genes across time-series samples with permutation-based FDR.}
 \resumeItem{Automated normalization, PCA, and volcano-plot workflows in R and ggplot2, improving interpretation efficiency by 15\%.}
 \resumeItemListEnd
@@ -94,13 +100,13 @@
 \resumeSubheading{FinChat -- AI-Powered Financial Analysis System}{Jan. 2023 -- May 2024}{Southern Methodist University \textbar\ Python, FinGPT, LangChain, CrewAI}{Remote}
 \resumeItemListStart
 \resumeItem{Built LLM workflows for financial report analysis, extracting and processing 100+ SEC filings from EDGAR into a scalable data lake.}
-\resumeItem{Integrated FinGPT, LangChain, and CrewAI components for metric extraction, trend detection, and contextual financial interpretation, improving processing accuracy by 3\%.}
+\resumeItem{Integrated FinGPT, LangChain, and CrewAI components for metric extraction, trend detection, and contextual financial interpretation, improving filing-analysis consistency by 3\%.}
 \resumeItemListEnd
 
 \resumeSubheading{Data Scientist Assistant Intern -- Image Restoration}{Jul. 2023 -- Sep. 2023}{Chinese Academy of Sciences \textbar\ TensorFlow, Cloud, GFPGAN}{Beijing, China}
 \resumeItemListStart
 \resumeItem{Deployed image restoration modules on Alibaba Cloud via SSH, implementing VAE loss, Gaussian filters, and LSGAN functions for scalable reconstruction workflows.}
-\resumeItem{Constructed a TensorFlow 2 CNN, split 3.4k images into train/validation/test sets, and achieved 80\% accuracy across 5 image categories.}
+\resumeItem{Constructed a TensorFlow 2 CNN, split 3.4k images into train/validation/test sets, and achieved \textbf{80\% accuracy} across 5 image categories.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
@@ -108,8 +114,8 @@
 \resumeSubHeadingListStart
 \resumeSubheading{Neuroengineering Lab -- Machine Learning Research Assistant}{Jan. 2023 -- May 2024}{Python, MATLAB, MNE, RF, SVM, KNN, XGBoost}{Remote}
 \resumeItemListStart
-\resumeItem{Processed 35GB of EEG/fNIRS data for signal cleaning, feature extraction, connectivity analysis, and statistical testing; contributed to Frontiers and IEEE publications.}
-\resumeItem{Evaluated emotion-recognition models using RF, SVM, KNN, and XGBoost, strengthening experimental design, biomarker analysis, and applied ML research writing.}
+\resumeItem{Processed \textbf{35GB} of EEG/fNIRS data for signal cleaning, feature extraction, connectivity analysis, and statistical testing; contributed to Frontiers and IEEE publications.}
+\resumeItem{Evaluated emotion-recognition models using RF, SVM, KNN, and XGBoost to compare model behavior across EEG-derived features and experimental conditions.}
 \resumeItemListEnd
 \resumeSubheading{Kiwifruit Quality Grading -- Machine Learning Member \href{https://doi.org/10.1016/j.eswa.2025.129507}{\textbar\ Paper}}{Aug. 2022 -- May 2024}{Computer Vision, Feature Fusion, Model Evaluation}{Published 2025}
 \resumeItemListStart
