@@ -35,8 +35,7 @@
 
 <nav aria-label="Primary navigation">
     <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#engineering">Engineering</a>
+    <a href="#work">Work</a>
     <a href="#resume">Resume</a>
     <a href="#contact">Contact</a>
     <a href="#creative" class="nav-secondary">Photography &amp; Painting</a>
@@ -69,9 +68,9 @@
         </div>
     </section>
 
-    <section id="research" class="section">
-        <div class="section-kicker">Research and Applied AI</div>
-        <h2>Projects with a clear problem, method, and system logic.</h2>
+    <section id="work" class="section">
+        <div class="section-kicker">Work</div>
+        <h2>Two projects that show how I build, plus the rest of the record.</h2>
 
         <div class="work-grid">
             <article class="work-card featured">
@@ -91,112 +90,85 @@
                 <a href="https://github.com/kiat/codeAssist" target="_blank" rel="noopener noreferrer">GitHub repository</a>
             </article>
 
-            <article class="work-card">
-                <div class="meta">UT Austin | Mentor: Prof. Bo Xie | Jun. 2026 - Present</div>
-                <h3>Echo - Interactive AI Voice Simulation System</h3>
-                <p>
-                    Echo explores interactive voice feedback in task-based experiences. The system
-                    reacts to user pauses, errors, skipped fields, and task switching using session
-                    state, event triggers, browser TTS, and OpenAI APIs.
-                </p>
-                <ul>
-                    <li>Designed cooldown, interval, and event-priority logic to avoid repetitive voice playback.</li>
-                    <li>Modularized prompt and event logic so new task types can be added without changing the core session controller.</li>
-                </ul>
-            </article>
-
-            <article class="work-card">
-                <div class="meta">UT Austin | Mentor: Prof. Becca Young | Jan. 2024 - Dec. 2024</div>
-                <h3>Biological Data Analytics</h3>
-                <p>
-                    Processed 250GB of RNA-seq data using reproducible R/Linux workflows, applying
-                    transcript quantification, Voom/Limma differential-expression analysis,
-                    permutation-based FDR, PCA, and volcano-plot reporting.
-                </p>
-            </article>
-
-            <article class="work-card">
-                <div class="meta">Remote | Mentor: Dr. Kunqiang Qing | Jan. 2023 - May 2024</div>
-                <h3>Neuroengineering Lab</h3>
-                <p>
-                    Analyzed 35GB of EEG/fNIRS data for signal cleaning, feature extraction,
-                    connectivity analysis, statistical testing, cognitive impairment analysis,
-                    and EEG-based emotion recognition.
-                </p>
-            </article>
-
-            <article class="work-card">
-                <div class="meta">Huazhong Agricultural University | Wuhan, China (Hybrid) | Aug. 2022 - May 2024</div>
-                <h3>Kiwifruit Quality Grading</h3>
-                <p>
-                    Contributed to image-based fruit quality grading using color, texture, shape,
-                    feature-fusion methods, model benchmarking, and analysis for a paper published
-                    in <em>Expert Systems with Applications</em>.
-                </p>
-                <a href="https://doi.org/10.1016/j.eswa.2025.129507" target="_blank" rel="noopener noreferrer">Publication</a>
-            </article>
-
-            <article class="work-card">
-                <div class="meta">Southern Methodist University | Dallas, TX (Remote Hybrid) | Jan. 2023 - May 2024</div>
-                <h3>FinChat - AI Financial Analysis</h3>
-                <p>
-                    Built LLM workflows for financial report analysis by extracting SEC filings
-                    from EDGAR, structuring unstructured filings, and connecting FinGPT, LangChain,
-                    and CrewAI workflows for metric extraction and contextual interpretation.
-                </p>
-            </article>
-        </div>
-    </section>
-
-    <section id="engineering" class="section">
-        <div class="section-kicker">Engineering and Risk Analytics</div>
-        <h2>Industry work across risk models, data pipelines, APIs, and dashboards.</h2>
-        <p>
-            For full-stack architecture — REST APIs, database schema, role-based access —
-            see <a href="#research">CodeAssist</a> above. This section covers the data
-            engineering and risk-analytics side of the work.
-        </p>
-
-        <div class="timeline">
-            <article>
+            <article class="work-card featured">
                 <div class="meta">Toyota Industries Commercial Finance | Dallas, TX | May 2025 - Dec. 2025</div>
                 <h3>Enterprise Risk Analyst Intern</h3>
                 <p>
-                    Developed an end-to-end credit risk analytics pipeline integrating PayNet
-                    inquiries and internal servicing data through SQL Server ETL, feature
-                    engineering, Logistic Regression, Random Forest modeling, ROC/AUC validation,
-                    backtesting, and Power BI reporting automation.
+                    End-to-end credit risk analytics pipeline integrating PayNet inquiries and
+                    internal loan servicing data, from SQL Server ETL and feature engineering
+                    through modeling, validation, and automated reporting.
                 </p>
+                <ul>
+                    <li>Validated Logistic Regression and Random Forest models with ROC/AUC and confusion matrices, achieving AUC &gt; 0.82 and improving high-risk case identification by 3-4%.</li>
+                    <li>Backtested predicted risk buckets against observed outcomes, finding up to 3.7x higher default rates in high-risk groups.</li>
+                    <li>Automated monthly model refreshes and Power BI reporting, cutting manual reporting effort by 10%.</li>
+                </ul>
+            </article>
+        </div>
+
+        <div class="more-list">
+            <article class="more-item">
+                <div class="more-item-head">
+                    <h3>Echo - Interactive AI Voice Simulation System</h3>
+                    <span class="meta">UT Austin | Prof. Bo Xie | Jun. 2026 - Present</span>
+                </div>
+                <p>Event-driven voice feedback that responds to user pauses, errors, and task switching using session state, browser TTS, and OpenAI APIs.</p>
             </article>
 
-            <article>
-                <div class="meta">Caitong Securities Ltd | Hangzhou, China | Jul. 2024 - Aug. 2024</div>
-                <h3>Financial Data Development Engineer - Fraud Detection</h3>
-                <p>
-                    Designed SQL ETL pipelines processing 10M+ daily transactions and built
-                    modular fraud-detection and customer risk-scoring logic for transaction
-                    monitoring workflows.
-                </p>
+            <article class="more-item">
+                <div class="more-item-head">
+                    <h3>FinChat - AI-Powered Financial Analysis</h3>
+                    <span class="meta">SMU | Dallas, TX (Remote Hybrid) | Jan. 2023 - May 2024</span>
+                </div>
+                <p>LLM workflows extracting and structuring 100+ SEC filings from EDGAR, using FinGPT, LangChain, and CrewAI for metric extraction and contextual interpretation.</p>
             </article>
 
-            <article>
-                <div class="meta">Joblogic-X Corporation | Dallas, TX | Nov. 2023 - Jun. 2024</div>
-                <h3>Software Engineering Intern - Customer Analytics</h3>
-                <p>
-                    Built customer analytics pipelines combining social-media and order data,
-                    implemented ranking and clustering logic, and integrated KOC scoring into
-                    a customer-facing chatbot workflow.
-                </p>
+            <article class="more-item">
+                <div class="more-item-head">
+                    <h3>Financial Data Development Engineer - Fraud Detection</h3>
+                    <span class="meta">Caitong Securities Ltd | Hangzhou, China | Jul. 2024 - Aug. 2024</span>
+                </div>
+                <p>SQL ETL pipelines processing 10M+ daily transactions, with modular fraud-detection logic and a customer risk-scoring engine for transaction monitoring.</p>
             </article>
 
-            <article>
-                <div class="meta">Chinese Academy of Sciences | Beijing, China | Jul. 2023 - Sep. 2023</div>
-                <h3>Image Restoration Intern</h3>
-                <p>
-                    Deployed image-restoration modules on Alibaba Cloud, implemented VAE loss,
-                    Gaussian filters, LSGAN components, TensorFlow classification, and GFPGAN
-                    restoration workflows.
-                </p>
+            <article class="more-item">
+                <div class="more-item-head">
+                    <h3>Software Engineering Intern - Customer Analytics</h3>
+                    <span class="meta">Joblogic-X Corporation | Dallas, TX | Nov. 2023 - Jun. 2024</span>
+                </div>
+                <p>Customer analytics pipeline combining social-media and order data, with ranking/clustering logic and a KOC scoring module integrated into a customer-facing chatbot.</p>
+            </article>
+
+            <article class="more-item">
+                <div class="more-item-head">
+                    <h3>Researcher &amp; TA - Biological Data Analytics</h3>
+                    <span class="meta">UT Austin | Prof. Becca Young | Jan. 2024 - Dec. 2024</span>
+                </div>
+                <p>Processed 250GB of RNA-seq data, applying transcript quantification, Voom/Limma differential-expression analysis, permutation-based FDR, and PCA.</p>
+            </article>
+
+            <article class="more-item">
+                <div class="more-item-head">
+                    <h3>Machine Learning Research Assistant - Neuroengineering Lab</h3>
+                    <span class="meta">Remote | Dr. Kunqiang Qing | Jan. 2023 - May 2024</span>
+                </div>
+                <p>Analyzed 35GB of multimodal EEG/fNIRS data for signal cleaning, connectivity analysis, and RF/SVM/KNN/XGBoost model evaluation on cognitive-impairment and emotion-recognition signals.</p>
+            </article>
+
+            <article class="more-item">
+                <div class="more-item-head">
+                    <h3>Kiwifruit Quality Grading - Machine Learning Member</h3>
+                    <span class="meta">Huazhong Agricultural University | Wuhan, China (Hybrid) | Aug. 2022 - May 2024</span>
+                </div>
+                <p>Image-based fruit grading using color, texture, shape, and feature-fusion methods, contributing to a paper published in <em>Expert Systems with Applications</em>. <a href="https://doi.org/10.1016/j.eswa.2025.129507" target="_blank" rel="noopener noreferrer">Publication</a></p>
+            </article>
+
+            <article class="more-item">
+                <div class="more-item-head">
+                    <h3>Data Scientist Assistant Intern - Image Restoration</h3>
+                    <span class="meta">Chinese Academy of Sciences | Beijing, China | Jul. 2023 - Sep. 2023</span>
+                </div>
+                <p>Deployed image-restoration modules on Alibaba Cloud, implementing VAE loss, Gaussian filters, LSGAN components, a TensorFlow CNN, and GFPGAN restoration workflows.</p>
             </article>
         </div>
     </section>
