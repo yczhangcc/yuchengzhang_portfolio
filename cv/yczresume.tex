@@ -85,10 +85,10 @@
 \resumeSubHeadingListStart
 \resumeSubheading{Enterprise Risk Analyst Intern}{May 2025 -- Dec. 2025}{Toyota Industries Commercial Finance, Inc. \textbar\ Python, SQL Server, Azure, Power BI}{Dallas, TX}
 \resumeItemListStart
-\resumeItem{Built an end-to-end credit risk modeling workflow from SQL Server data, covering ETL, credit-feature engineering, Logistic Regression, Random Forest modeling, validation, and monthly reporting automation.}
+\resumeItem{Developed an end-to-end credit risk analytics pipeline integrating PayNet inquiries and internal loan servicing data through SQL Server ETL, borrower and asset feature engineering, Python modeling, and monthly reporting automation.}
 \resumeItem{Validated models with ROC/AUC, confusion matrices, and feature importance, achieving \textbf{AUC $>$ 0.82} across Class 8 trucks, trailers, and used-vehicle loans and improving high-risk case identification by approximately \textbf{3--4\%}.}
 \resumeItem{Conducted backtesting by comparing predicted risk buckets against observed outcomes, revealing up to \textbf{3.7$\times$ higher default rates} in high-risk groups and informing credit scorecard segmentation refinements.}
-\resumeItem{Delivered Azure and Power BI dashboards and used Excel reconciliation to align PayNet records with internal servicing data for recurring truck, trailer, and used-vehicle portfolio risk monitoring.}
+\resumeItem{Automated recurring model refreshes and Power BI reporting workflows, reducing manual reporting effort by 10\% while supporting portfolio risk monitoring across truck, trailer, and used-vehicle segments.}
 \resumeItemListEnd
 
 \resumeSubheading{Financial Data Development Engineer -- Fraud Detection}{Jul. 2024 -- Aug. 2024}{Caitong Securities Ltd \textbar\ SQL, Oracle, Stored Procedures}{Hangzhou, China}
@@ -115,15 +115,21 @@
 
 \section{Research Experience and Projects}
 \resumeSubHeadingListStart
-\resumeSubheading{CodeAssist Project \href{https://github.com/kiat/codeAssist}{\textbar\ GitHub}}{Aug. 2025 -- Present}{University of Texas at Austin \textbar\ Mentor: Prof. Kia Teymourian \textbar\ React, Flask, PostgreSQL, Docker}{Austin, TX}
+\resumeSubheading{Echo -- Interactive AI Voice Simulation System}{Jun. 2026 -- Present}{University of Texas at Austin \textbar\ Mentor: Prof. Bo Xie \textbar\ Next.js, TypeScript, OpenAI API}{Austin, TX}
 \resumeItemListStart
-\resumeItem{Built assignment-level AI feedback controls, enabling instructors to configure prompt templates, context permissions, model settings, request limits, and cooldown rules per assignment.}
-\resumeItem{Developed Flask REST APIs for AI feedback settings with backend validation, JSON serialization, SQLAlchemy models, Alembic migrations, and instructor/TA authorization safeguards.}
-\resumeItem{Implemented LLM context-filtering logic so only instructor-approved assignment descriptions, student code, test results, test cases, and student output are sent to AI providers.}
-\resumeItem{Standardized provider and assignment-level AI settings across OpenAI, Gemini, Claude, and local models, including model selection, API configuration, and timeout handling.}
+\resumeItem{Built an event-driven voice simulation system that generates context-aware responses from user pauses, errors, skipped fields, and task switching using session state, trigger rules, browser TTS, and OpenAI APIs.}
+\resumeItem{Designed cooldown, interval, and event-priority logic to prevent repetitive playback and make voice feedback responsive to task state, interaction timing, and user behavior.}
 \resumeItemListEnd
 
 \newpage
+
+\resumeSubheading{CodeAssist -- AI Feedback System \href{https://github.com/kiat/codeAssist}{\textbar\ GitHub}}{Aug. 2025 -- Present}{University of Texas at Austin \textbar\ Mentor: Prof. Kia Teymourian \textbar\ React, Flask, PostgreSQL, Docker}{Austin, TX}
+\resumeItemListStart
+\resumeItem{Built a full-stack AI feedback system for programming courses, connecting student code editing, file uploads, submissions, and chat-based AI feedback for debugging, complexity reasoning, implementation ideas, and test-case correctness.}
+\resumeItem{Developed Flask REST APIs and PostgreSQL models for AI feedback settings, instructor controls, request limits, cooldown policies, role-based access, JSON serialization, and Alembic-backed schema changes.}
+\resumeItem{Implemented LLM context filtering so assignment descriptions, student code, uploaded files, test cases, execution results, and student output are shared only when allowed by instructor-defined policies.}
+\resumeItem{Standardized provider workflows across OpenAI, Gemini, Claude, and local models, including model selection, API configuration, timeout handling, and assignment-level prompt behavior.}
+\resumeItemListEnd
 
 \resumeSubheading{Researcher \& TA -- Biological Data Analytics}{Jan. 2024 -- Dec. 2024}{University of Texas at Austin \textbar\ Mentor: Prof. Becca Young \textbar\ R, Linux, AWS, Docker}{Austin, TX}
 \resumeItemListStart
@@ -133,18 +139,17 @@
 \resumeItem{Collaborated as a teaching assistant to train incoming FRI students on reproducible RNA-seq pipelines and data literacy.}
 \resumeItemListEnd
 
-\resumeSubheading{FinChat -- AI-Powered Financial Analysis System}{Jan. 2023 -- May 2024}{Southern Methodist University \textbar\ Mentor: Prof. Labiba Jahan \textbar\ Python, FinGPT, LangChain, CrewAI}{Remote}
+\resumeSubheading{FinChat -- AI-Powered Financial Analysis System}{Jan. 2023 -- May 2024}{Southern Methodist University \textbar\ Prof. Labiba Jahan \textbar\ Python, FinGPT, LangChain}{Dallas, TX (Remote Hybrid)}
 \resumeItemListStart
 \resumeItem{Built LLM workflows for financial report analysis by extracting and processing 100+ SEC filings from EDGAR into a structured data lake for metric extraction, trend detection, and company-level comparison.}
-\resumeItem{Implemented LangChain/CrewAI workflows for contextual financial interpretation, improving data processing accuracy by 3\% and reducing manual review time for filing analysis.}
+\resumeItem{Implemented LangChain/CrewAI workflows for contextual financial interpretation, improving filing-analysis accuracy by 3\% and reducing manual review time for filing analysis.}
 \resumeItem{Collaborated with a cross-university research team to connect FinGPT-based retrieval, filing preprocessing, and financial-question workflows into a reusable analysis prototype.}
 \resumeItemListEnd
 
-\resumeSubheading{Kiwifruit Quality Grading Project -- Machine Learning Member}{Aug. 2022 -- May 2024}{Huazhong Agricultural University \textbar\ Mentor: Prof. Yan Tong \textbar\ Python, Computer Vision}{Remote}
+\resumeSubheading{Kiwifruit Quality Grading Project -- Machine Learning Member}{Aug. 2022 -- May 2024}{Huazhong Agricultural University \textbar\ Mentor: Prof. Yan Tong \textbar\ Python, Computer Vision}{Wuhan, China (Hybrid)}
 \resumeItemListStart
 \resumeItem{Contributed to an automated fruit grading pipeline using color, texture, shape, and feature-fusion methods; benchmarked model variants and analyzed results for the ML methodology section.}
 \resumeItem{Compared feature combinations to improve grading accuracy and interpretation for research later published in \textit{Expert Systems with Applications}.}
-\resumeItem{Separately explored distributed-ledger approaches for fruit traceability and data provenance in agricultural supply-chain scenarios.}
 \resumeItemListEnd
 
 \resumeSubheading{Machine Learning Research Assistant -- Neuroengineering Lab}{Jan. 2023 -- May 2024}{Remote \textbar\ Mentor: Dr. Kunqiang Qing \textbar\ Python, MATLAB, MNE}{Remote}

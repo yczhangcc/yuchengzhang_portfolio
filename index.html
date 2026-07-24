@@ -4,399 +4,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cecilia Zhang | Portfolio</title>
+    <title>Yucheng (Cecilia) Zhang | AI/ML Research Engineer</title>
+    <meta name="description" content="Portfolio of Yucheng (Cecilia) Zhang: AI/ML research engineer building applied machine learning systems across financial risk, biomedical data, and human-centered AI, plus photography and painting.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400..560&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
 <header class="hero">
-    <div class="hero-content">
-
-        <img src="imgs/photo.jpg" alt="Cecilia Zhang" class="profile-pic">
-
-        <h1>Cecilia Zhang</h1>
-
-        <p class="subtitle">
-            Machine Learning Algorithms • ML Systems • AI Agents • Risk Analytics
+    <div class="hero-inner">
+        <img src="imgs/photo.jpg" alt="Yucheng Cecilia Zhang" class="profile-pic">
+        <p class="eyebrow">AI / ML Research Engineer</p>
+        <h1>Yucheng (Cecilia) Zhang</h1>
+        <p class="hero-copy">
+            I build machine learning and LLM systems that turn messy, high-stakes data —
+            loan portfolios, EEG signals, student code — into decisions people can trust.
+            Software engineering is how I build it; research is where the methods come from.
         </p>
-
-        <p class="contact-line">
-            📧 ceciliayczhang@gmail.com |
-            <a href="https://www.linkedin.com/in/yczcecilia" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-            <a href="https://github.com/yczhangcc" target="_blank" rel="noopener noreferrer">GitHub</a> |
-            <a href="https://scholar.google.com/citations?user=Stx_NRQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-        </p>
-
-        <div class="hero-buttons">
-            <a href="cv/CV.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary">📄 View Resume</a>
+        <div class="hero-actions">
+            <a href="cv/CV.pdf" target="_blank" rel="noopener noreferrer" class="button primary">Full CV</a>
+            <a href="cv/resume_ml_ai.pdf" target="_blank" rel="noopener noreferrer" class="button">AI/ML Resume</a>
+            <a href="cv/resume_swe.pdf" target="_blank" rel="noopener noreferrer" class="button">SWE Resume</a>
+            <a href="cv/resume_quant_finance.pdf" target="_blank" rel="noopener noreferrer" class="button">Risk Resume</a>
         </div>
-
     </div>
 </header>
 
-<nav>
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#interests">Interests</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+<nav aria-label="Primary navigation">
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#engineering">Engineering</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+    <a href="#creative" class="nav-secondary">Photography &amp; Painting</a>
 </nav>
 
-<!-- ABOUT -->
-<section id="about">
-    <h2>About Me</h2>
+<main>
+    <section id="about" class="section">
+        <div class="section-kicker">About</div>
+        <h2>I build validated inference pipelines for messy, real-world data.</h2>
+        <div class="two-column">
+            <div>
+                <p>
+                    I am Yucheng (Cecilia) Zhang, an incoming M.S. student in Computer Science
+                    at Northwestern University and a B.S. Mathematics student with a Computer
+                    Science minor at The University of Texas at Austin.
+                </p>
+                <p>
+                    Whether the input is EEG voltage, loan servicing records, or RNA transcripts,
+                    the problem is the same: noisy signal that needs a rigorous pipeline before
+                    anyone can trust a decision built on it. I've built that pipeline as
+                    production software (CodeAssist, Echo), as statistical models (Toyota credit
+                    risk, RNA-seq analysis), and as five peer-reviewed publications along the way.
+                </p>
+            </div>
+            <div class="signal-list">
+                <p><strong>Current focus:</strong> LLM systems, applied ML, and model evaluation for real users.</p>
+                <p><strong>Technical base:</strong> Python, SQL, React, Flask, PostgreSQL, Docker, Scikit-learn, TensorFlow, PyTorch.</p>
+                <p><strong>Also:</strong> photography and painting — a slower, quieter version of the same habit of close observation.</p>
+            </div>
+        </div>
+    </section>
 
-    <p>
-        Hi, I am Cecilia Zhang. My legal name is Yucheng Zhang, and I usually appear
-        in formal academic and professional records as Yucheng (Cecilia) Zhang.
-    </p>
+    <section id="research" class="section">
+        <div class="section-kicker">Research and Applied AI</div>
+        <h2>Projects with a clear problem, method, and system logic.</h2>
 
-    <p>
-        I am an incoming M.S. student in Computer Science at Northwestern University,
-        starting in Fall 2026, and I plan to explore the thesis track. I am currently
-        completing my B.S. in Mathematics with a minor in Computer Science at The
-        University of Texas at Austin. My academic background has trained me to think
-        carefully about algorithms, uncertainty, modeling, and the mathematical structure
-        behind complex systems.
-    </p>
+        <div class="work-grid">
+            <article class="work-card featured">
+                <div class="meta">UT Austin | Mentor: Prof. Kia Teymourian | Aug. 2025 - Present</div>
+                <h3>CodeAssist - Full-Stack AI Feedback System</h3>
+                <p>
+                    CodeAssist is an AI feedback system for programming education. Students can
+                    write code through an editor, upload files, submit work, and use an AI chat
+                    interface to receive feedback on debugging, algorithm complexity, implementation
+                    ideas, and test-case correctness.
+                </p>
+                <ul>
+                    <li>Built assignment-level AI controls for prompt templates, context permissions, model providers, usage limits, and cooldown policies.</li>
+                    <li>Implemented Flask APIs, PostgreSQL models, SQLAlchemy logic, Alembic migrations, validation, and role-based access safeguards.</li>
+                    <li>Filtered LLM context so assignment descriptions, student code, uploaded files, test cases, execution results, and output are shared only under instructor-defined policies.</li>
+                </ul>
+                <a href="https://github.com/kiat/codeAssist" target="_blank" rel="noopener noreferrer">GitHub repository</a>
+            </article>
 
-    <p>
-        My research interests are centered on machine learning algorithms, reliable AI
-        agents, ML systems, and human-centered AI. I am especially interested in how AI
-        systems plan, reason, use tools, remember context, and make multi-step decisions.
-        Recently, I have also become interested in embodied AI and robotics, particularly
-        how agents can use memory, emotion, social context, and creative expression to
-        act in more adaptive and human-like ways.
-    </p>
+            <article class="work-card">
+                <div class="meta">UT Austin | Mentor: Prof. Bo Xie | Jun. 2026 - Present</div>
+                <h3>Echo - Interactive AI Voice Simulation System</h3>
+                <p>
+                    Echo explores interactive voice feedback in task-based experiences. The system
+                    reacts to user pauses, errors, skipped fields, and task switching using session
+                    state, event triggers, browser TTS, and OpenAI APIs.
+                </p>
+                <ul>
+                    <li>Designed cooldown, interval, and event-priority logic to avoid repetitive voice playback.</li>
+                    <li>Modularized prompt and event logic so new task types can be added without changing the core session controller.</li>
+                </ul>
+            </article>
 
-    <p>
-        My experience spans risk analytics, machine learning, AI systems, and applied
-        research. At Toyota Industries Commercial Finance, I worked on credit risk modeling,
-        feature engineering, model validation, backtesting, and dashboard development using
-        SQL, Python, Azure, and Power BI. I have also developed LLM-based financial analysis
-        workflows through FinChat, contributed to scalable AI system architecture through
-        CodeAssist, and applied machine learning and statistical methods in bioinformatics,
-        computer vision, and neuroengineering research.
-    </p>
+            <article class="work-card">
+                <div class="meta">UT Austin | Mentor: Prof. Becca Young | Jan. 2024 - Dec. 2024</div>
+                <h3>Biological Data Analytics</h3>
+                <p>
+                    Processed 250GB of RNA-seq data using reproducible R/Linux workflows, applying
+                    transcript quantification, Voom/Limma differential-expression analysis,
+                    permutation-based FDR, PCA, and volcano-plot reporting.
+                </p>
+            </article>
 
-    <p>
-        Across these experiences, I have become especially interested in connecting
-        algorithmic machine learning research with practical AI system building. I care
-        about how models reason, where they fail, how they can be evaluated, and how they
-        can be deployed reliably in real-world settings. Long term, I hope to build AI
-        systems that are technically capable, interpretable, useful, and meaningfully
-        aligned with human needs.
-    </p>
-</section>
+            <article class="work-card">
+                <div class="meta">Remote | Mentor: Dr. Kunqiang Qing | Jan. 2023 - May 2024</div>
+                <h3>Neuroengineering Lab</h3>
+                <p>
+                    Analyzed 35GB of EEG/fNIRS data for signal cleaning, feature extraction,
+                    connectivity analysis, statistical testing, cognitive impairment analysis,
+                    and EEG-based emotion recognition.
+                </p>
+            </article>
 
-<!-- EDUCATION -->
-<section id="education">
-    <h2>Education</h2>
+            <article class="work-card">
+                <div class="meta">Huazhong Agricultural University | Wuhan, China (Hybrid) | Aug. 2022 - May 2024</div>
+                <h3>Kiwifruit Quality Grading</h3>
+                <p>
+                    Contributed to image-based fruit quality grading using color, texture, shape,
+                    feature-fusion methods, model benchmarking, and analysis for a paper published
+                    in <em>Expert Systems with Applications</em>.
+                </p>
+                <a href="https://doi.org/10.1016/j.eswa.2025.129507" target="_blank" rel="noopener noreferrer">Publication</a>
+            </article>
 
-    <div class="education-item">
-        <h3>Northwestern University</h3>
-        <p>M.S. in Computer Science, Thesis Track (Fall 2026 – May 2028)</p>
-        <p>Evanston, IL</p>
-    </div>
+            <article class="work-card">
+                <div class="meta">Southern Methodist University | Dallas, TX (Remote Hybrid) | Jan. 2023 - May 2024</div>
+                <h3>FinChat - AI Financial Analysis</h3>
+                <p>
+                    Built LLM workflows for financial report analysis by extracting SEC filings
+                    from EDGAR, structuring unstructured filings, and connecting FinGPT, LangChain,
+                    and CrewAI workflows for metric extraction and contextual interpretation.
+                </p>
+            </article>
+        </div>
+    </section>
 
-    <div class="education-item">
-        <h3>The University of Texas at Austin</h3>
-        <p>B.S. in Mathematics, Minor in Computer Science (Aug 2023 – May 2026)</p>
-        <p>GPA: 3.74/4.00 | Austin, TX</p>
-    </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience">
-    <h2>Professional Experience</h2>
-
-    <div class="job">
-        <h3>Risk Analytics Intern</h3>
-        <p>Toyota Industries Commercial Finance | Dallas, TX | May 2025 – Dec 2025</p>
-
+    <section id="engineering" class="section">
+        <div class="section-kicker">Engineering and Risk Analytics</div>
+        <h2>Industry work across risk models, data pipelines, APIs, and dashboards.</h2>
         <p>
-            Worked on credit risk modeling and analytics for commercial finance portfolios,
-            with a focus on building reliable data pipelines, validating model performance,
-            and translating model results into business-facing dashboards.
+            For full-stack architecture — REST APIs, database schema, role-based access —
+            see <a href="#research">CodeAssist</a> above. This section covers the data
+            engineering and risk-analytics side of the work.
         </p>
 
-        <ul>
-            <li>Built full-stack credit risk pipelines using SQL Server, Python, and Azure.</li>
-            <li>Developed Logistic Regression and Random Forest models with AUC &gt; 0.82.</li>
-            <li>Engineered PayNet-based feature systems, including LTV, tenure, inquiry history, and business credit variables.</li>
-            <li>Conducted bucket-level and segment-level backtesting to refine credit scorecard logic.</li>
-            <li>Delivered interactive Power BI dashboards for portfolio monitoring, model review, and risk segmentation.</li>
-            <li>Automated monthly model refresh pipelines to reduce repetitive reporting work and support real-time risk tracking.</li>
-        </ul>
-    </div>
+        <div class="timeline">
+            <article>
+                <div class="meta">Toyota Industries Commercial Finance | Dallas, TX | May 2025 - Dec. 2025</div>
+                <h3>Enterprise Risk Analyst Intern</h3>
+                <p>
+                    Developed an end-to-end credit risk analytics pipeline integrating PayNet
+                    inquiries and internal servicing data through SQL Server ETL, feature
+                    engineering, Logistic Regression, Random Forest modeling, ROC/AUC validation,
+                    backtesting, and Power BI reporting automation.
+                </p>
+            </article>
 
-    <div class="job">
-        <h3>Financial Data Development Engineer – Fraud Detection</h3>
-        <p>Caitong Securities Ltd | Hangzhou, China | Jul 2024 – Aug 2024</p>
+            <article>
+                <div class="meta">Caitong Securities Ltd | Hangzhou, China | Jul. 2024 - Aug. 2024</div>
+                <h3>Financial Data Development Engineer - Fraud Detection</h3>
+                <p>
+                    Designed SQL ETL pipelines processing 10M+ daily transactions and built
+                    modular fraud-detection and customer risk-scoring logic for transaction
+                    monitoring workflows.
+                </p>
+            </article>
 
+            <article>
+                <div class="meta">Joblogic-X Corporation | Dallas, TX | Nov. 2023 - Jun. 2024</div>
+                <h3>Software Engineering Intern - Customer Analytics</h3>
+                <p>
+                    Built customer analytics pipelines combining social-media and order data,
+                    implemented ranking and clustering logic, and integrated KOC scoring into
+                    a customer-facing chatbot workflow.
+                </p>
+            </article>
+
+            <article>
+                <div class="meta">Chinese Academy of Sciences | Beijing, China | Jul. 2023 - Sep. 2023</div>
+                <h3>Image Restoration Intern</h3>
+                <p>
+                    Deployed image-restoration modules on Alibaba Cloud, implemented VAE loss,
+                    Gaussian filters, LSGAN components, TensorFlow classification, and GFPGAN
+                    restoration workflows.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section id="creative" class="section creative-band">
+        <div class="section-kicker">Creative Work</div>
+        <h2>Photography and painting as a parallel practice in observation.</h2>
         <p>
-            Worked on transaction data processing and fraud detection logic for securities
-            trading data, combining SQL-based ETL, risk scoring, and compliance-oriented
-            analytics.
+            The same attention that goes into a modeling pipeline — noticing pattern, structure,
+            and what's actually there versus what I expect to see — shows up here too, just
+            slower and without a deadline.
         </p>
-
-        <ul>
-            <li>Designed high-volume ETL pipelines for 10M+ daily transaction records.</li>
-            <li>Applied advanced SQL optimization techniques, including window functions, subqueries, and stored procedures.</li>
-            <li>Reduced false positives through modular detection logic and parameterized thresholds.</li>
-            <li>Built scalable customer risk scoring systems to support suspicious transaction detection and AML workflows.</li>
-        </ul>
-    </div>
-
-    <div class="job">
-        <h3>Software Engineering Intern – Customer Analytics</h3>
-        <p>Joblogic-X Corp | Dallas, TX | Nov 2023 – Jun 2024</p>
-
-        <p>
-            Built data and machine learning workflows for customer analytics and influencer
-            marketing, focusing on social media data processing, creator scoring, and
-            chatbot-based decision support.
-        </p>
-
-        <ul>
-            <li>Engineered social media data pipelines for customer and influencer analytics.</li>
-            <li>Developed clustering and ranking algorithms to evaluate KOC engagement, content quality, and brand relevance.</li>
-            <li>Integrated KOC scoring logic with AI chatbot APIs for automated marketing analysis and recommendation support.</li>
-            <li>Managed Git-based deployment workflows to improve reproducibility, maintainability, and cross-platform development.</li>
-        </ul>
-    </div>
-</section>
-
-<!-- RESEARCH & PROJECTS -->
-<section id="projects">
-    <h2>Research &amp; Projects</h2>
-
-    <div class="project">
-        <h3>CodeAssist — Multi-Provider AI System Architecture</h3>
-
-        <p class="project-meta">
-            University of Texas at Austin | Mentor: Prof. Kia Teymourian | Aug 2025 – Present
-        </p>
-
-        <p>
-            CodeAssist is an AI-assisted learning and coding platform. My work focuses on
-            building modular backend architecture that can support multiple AI providers,
-            dynamic model routing, and scalable deployment.
-        </p>
-
-        <p class="project-link">
-            🔗 GitHub:
-            <a href="https://github.com/kiat/codeAssist" target="_blank" rel="noopener noreferrer">
-                github.com/kiat/codeAssist
+        <div class="creative-grid">
+            <a href="photograph/index.html" class="creative-card photo-card">
+                <span>Photography</span>
+                <strong>Landscape, travel, city, and quiet details</strong>
             </a>
-        </p>
+            <a href="painting/index.html" class="creative-card painting-card">
+                <span>Painting</span>
+                <strong>Color studies, portrait studies, and visual experiments</strong>
+            </a>
+        </div>
+    </section>
 
-        <ul>
-            <li>Integrated OpenAI and Hugging Face models through a flexible API routing framework.</li>
-            <li>Implemented dynamic model-switching logic to reduce vendor lock-in and optimize performance-cost tradeoffs.</li>
-            <li>Improved system maintainability through backend refactoring, Docker workflows, and UI-backend debugging.</li>
-            <li>Debugged front-end update issues, including course list and course description display problems, to improve user experience.</li>
-        </ul>
-    </div>
+    <section id="resume" class="section">
+        <div class="section-kicker">Resume System</div>
+        <h2>One full CV for the website, plus targeted versions for applications.</h2>
+        <div class="resume-grid">
+            <a href="cv/CV.pdf" target="_blank" rel="noopener noreferrer">Full CV</a>
+            <a href="cv/resume_ml_ai.pdf" target="_blank" rel="noopener noreferrer">AI / ML / Data Resume</a>
+            <a href="cv/resume_swe.pdf" target="_blank" rel="noopener noreferrer">Software Engineering Resume</a>
+            <a href="cv/resume_quant_finance.pdf" target="_blank" rel="noopener noreferrer">Risk / Financial Analytics Resume</a>
+        </div>
+    </section>
 
-    <div class="project">
-        <h3>Kiwifruit Quality Grading — Machine Learning Researcher</h3>
-
-        <p class="project-meta">
-            Huazhong Agricultural University | Aug 2022 – May 2025
-        </p>
-
+    <section id="contact" class="section contact-section">
+        <div class="section-kicker">Contact</div>
+        <h2>Open to software engineering, AI/ML, data science, and risk analytics roles.</h2>
+        <p>Email: <a href="mailto:ceciliayczhang@gmail.com">ceciliayczhang@gmail.com</a></p>
         <p>
-            Developed an automated fruit grading system using image processing,
-            multi-feature fusion, and deep learning. The project aimed to improve the
-            consistency and interpretability of kiwifruit quality evaluation.
+            <a href="https://www.linkedin.com/in/yczcecilia" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/yczhangcc" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://scholar.google.com/citations?user=Stx_NRQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
         </p>
-
-        <ul>
-            <li>Built a feature fusion and ResTNet-based grading pipeline.</li>
-            <li>Extracted and compared image features related to color, texture, shape, and visual quality.</li>
-            <li>Integrated Grad-CAM for model interpretability and visual explanation.</li>
-            <li>Optimized grading accuracy through feature comparison and model benchmarking.</li>
-            <li>Explored blockchain-based traceability for improving agricultural data reliability and transparency.</li>
-        </ul>
-
-        <p class="pub-link">
-            📄 Publication:
-            <a href="https://doi.org/10.1016/j.eswa.2025.129507" target="_blank" rel="noopener noreferrer">
-                Expert Systems with Applications (2025)
-            </a>
-        </p>
-    </div>
-
-    <div class="project">
-        <h3>Neuroengineering Lab — Machine Learning Research Assistant</h3>
-
-        <p class="project-meta">
-            Remote | Mentor: Dr. Kunqiang Qing | Jan 2023 – May 2024
-        </p>
-
-        <p>
-            Analyzed EEG and fNIRS multimodal signals for cognitive impairment,
-            digital assessment, emotion recognition, and digital therapy research.
-            This work combined signal processing, statistical analysis, and machine
-            learning for neuroengineering applications.
-        </p>
-
-        <ul>
-            <li>Processed 35GB of multimodal neural signal datasets.</li>
-            <li>Performed signal cleaning, visualization, feature extraction, and connectivity analysis.</li>
-            <li>Applied statistical testing and machine learning methods to study cognitive patterns and neurological biomarkers.</li>
-            <li>Built ML-based workflows for EEG emotion recognition using models such as RF, SVM, KNN, and XGBoost.</li>
-        </ul>
-
-        <p class="pub-link">
-            📄 Publications:
-            <a href="https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2024.1358167/full" target="_blank" rel="noopener noreferrer">
-                Frontiers in Neurology (2024)
-            </a>
-            |
-            <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1269359/full" target="_blank" rel="noopener noreferrer">
-                Frontiers in Neuroscience (2023)
-            </a>
-            |
-            <a href="https://ieeexplore.ieee.org/abstract/document/10257784" target="_blank" rel="noopener noreferrer">
-                IEEE ICIPCA (2023)
-            </a>
-        </p>
-    </div>
-
-    <div class="project">
-        <h3>FinChat — AI-Powered Financial Analysis System</h3>
-
-        <p class="project-meta">
-            Southern Methodist University | Mentor: Prof. Labiba Jahan | Jan 2023 – May 2024
-        </p>
-
-        <p>
-            FinChat is an AI-driven financial analysis project focused on helping users
-            extract, summarize, and interpret information from financial reports using
-            large language models.
-        </p>
-
-        <ul>
-            <li>Developed ETL pipelines to extract and process SEC filings from EDGAR.</li>
-            <li>Structured unstructured financial documents into analysis-ready formats for downstream LLM workflows.</li>
-            <li>Implemented LangChain-based workflows for contextual financial interpretation and metric extraction.</li>
-            <li>Explored multi-agent financial analysis workflows using CrewAI.</li>
-        </ul>
-    </div>
-
-    <div class="project">
-        <h3>Biological Data Analytics — RNA-seq Researcher &amp; TA</h3>
-
-        <p class="project-meta">
-            University of Texas at Austin | Mentor: Prof. Becca Young | Jan 2024 – Dec 2024
-        </p>
-
-        <p>
-            Worked on RNA-seq data analysis and reproducible bioinformatics workflows,
-            while also supporting new students as a teaching assistant in biological
-            data analytics.
-        </p>
-
-        <ul>
-            <li>Processed and analyzed 250GB of RNA-seq data using Linux, Docker, and AWS Cloud.</li>
-            <li>Applied bioinformatics tools including Salmon, RSEM, Trinity, and samtools for transcript quantification.</li>
-            <li>Achieved a 98.7% mapping rate through reproducible sequence analysis workflows.</li>
-            <li>Performed differential expression analysis with Voom and Limma.</li>
-            <li>Generated PCA plots, volcano plots, and normalized expression summaries in R.</li>
-            <li>Mentored incoming FRI students on RNA-seq workflows, Linux commands, and reproducible analysis practices.</li>
-        </ul>
-    </div>
-</section>
-
-<!-- INTERESTS / HOBBIES -->
-<section id="interests">
-    <h2>Interests &amp; Hobbies</h2>
-
-    <p>
-        Beyond academics and technical projects, I enjoy spending time on creative,
-        reflective, and outdoor activities. They help me slow down, observe the world
-        more carefully, and stay curious about people, stories, and ideas.
-    </p>
-
-    <ul>
-        <li>
-            🎨 <strong>Painting &amp; Visual Art</strong> — I enjoy creating acrylic,
-            watercolor, and digital artworks, especially landscapes and portraits. I am
-            drawn to color, atmosphere, composition, and the quiet storytelling that can
-            happen through visual details.
-        </li>
-
-        <li>
-            ✍️ <strong>Writing, Reading &amp; Reflection</strong> — I like writing personal
-            reflections on technology, psychology, finance, leadership, faith, and personal
-            growth. Writing helps me understand patterns behind decisions, emotions, and
-            long-term development.
-            <br>
-            <a href="https://medium.com/@CeciliaZ" target="_blank" rel="noopener noreferrer">
-                Medium: @CeciliaZ
-            </a>
-        </li>
-
-        <li>
-            🎬 <strong>Film &amp; Television</strong> — I enjoy stories with psychological
-            depth, moral complexity, and imaginative world-building. Some of my favorites
-            include <em>The Lord of the Rings</em>, <em>Better Call Saul</em>,
-            <em>Black Mirror</em>, and <em>Inside No. 9</em>. I am especially interested
-            in stories that explore identity, memory, technology, human nature, and the
-            choices people make under pressure.
-        </li>
-
-        <li>
-            📚 <strong>Literature</strong> — I enjoy reading works that combine imagination,
-            structure, and philosophical depth. One of my favorite writers is Italo Calvino,
-            whose work often explores possibility, abstraction, and the relationship between
-            reality and imagination.
-        </li>
-
-        <li>
-            🏸 <strong>Sports &amp; Outdoor Activities</strong> — I also enjoy badminton,
-            pickleball, tennis, nature walks, and traveling. These activities help me stay
-            active, explore new places, and recharge outside of work and study.
-        </li>
-    </ul>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-    <h2>Contact</h2>
-
-    <p>Email: ceciliayczhang@gmail.com</p>
-
-    <p>
-        LinkedIn:
-        <a href="https://www.linkedin.com/in/yczcecilia" target="_blank" rel="noopener noreferrer">
-            linkedin.com/in/yczcecilia
-        </a>
-    </p>
-
-    <p>
-        GitHub:
-        <a href="https://github.com/yczhangcc" target="_blank" rel="noopener noreferrer">
-            github.com/yczhangcc
-        </a>
-    </p>
-
-    <p>
-        Google Scholar:
-        <a href="https://scholar.google.com/citations?user=Stx_NRQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
-            Google Scholar Profile
-        </a>
-    </p>
-</section>
+    </section>
+</main>
 
 <footer>
-    <p>© 2026 Cecilia Zhang. All Rights Reserved.</p>
+    <p>2026 Yucheng (Cecilia) Zhang</p>
 </footer>
 
 </body>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography | Yucheng (Cecilia) Zhang</title>
+    <meta name="description" content="Photography gallery for Yucheng (Cecilia) Zhang: landscape, travel, and city work.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400..560&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="gallery-page">
+    <header class="gallery-hero">
+        <div class="gallery-hero-inner">
+            <a href="../index.html#creative" class="back-link">Back to portfolio</a>
+            <p class="eyebrow">Creative Work</p>
+            <h1>Photography</h1>
+            <p>
+                Light, distance, and the small details that change how a scene feels —
+                landscapes, cities, and quiet moments in between.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section class="gallery-intro">
+            <div class="section-kicker">Visual Studies</div>
+            <h2>Observation, place, and quiet narrative.</h2>
+            <p class="gallery-count">15 photographs</p>
+        </section>
+
+        <section class="photo-grid" aria-label="Photography">
+            <figure><img src="photo-01.jpg" alt="Photograph 1" loading="lazy" width="1448" height="1086"></figure>
+            <figure><img src="photo-02.jpg" alt="Photograph 2" loading="lazy" width="1024" height="768"></figure>
+            <figure><img src="photo-03.jpg" alt="Photograph 3" loading="lazy" width="1448" height="1086"></figure>
+            <figure><img src="photo-04.jpg" alt="Photograph 4" loading="lazy" width="768" height="1024"></figure>
+            <figure><img src="photo-05.jpg" alt="Photograph 5" loading="lazy" width="1024" height="682"></figure>
+            <figure><img src="photo-06.jpg" alt="Photograph 6" loading="lazy" width="682" height="1024"></figure>
+            <figure><img src="photo-07.jpg" alt="Photograph 7" loading="lazy" width="1024" height="682"></figure>
+            <figure><img src="photo-08.jpg" alt="Photograph 8" loading="lazy" width="1024" height="682"></figure>
+            <figure><img src="photo-09.jpg" alt="Photograph 9" loading="lazy" width="1024" height="682"></figure>
+            <figure><img src="photo-10.jpg" alt="Photograph 10" loading="lazy" width="1024" height="682"></figure>
+            <figure><img src="photo-11.jpg" alt="Photograph 11" loading="lazy" width="1024" height="682"></figure>
+            <figure><img src="photo-12.jpg" alt="Photograph 12" loading="lazy" width="1024" height="682"></figure>
+            <figure><img src="photo-13.jpg" alt="Photograph 13" loading="lazy" width="1024" height="682"></figure>
+            <figure><img src="photo-14.jpg" alt="Photograph 14" loading="lazy" width="1024" height="682"></figure>
+            <figure><img src="photo-15.jpg" alt="Photograph 15" loading="lazy" width="1024" height="682"></figure>
+        </section>
+    </main>
+
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close">&#10005;</button>
+        <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous">&#8249;</button>
+        <img id="lightbox-img" src="" alt="">
+        <button class="lightbox-next" id="lightbox-next" aria-label="Next">&#8250;</button>
+    </div>
+
+    <footer>
+        <p>2026 Yucheng (Cecilia) Zhang</p>
+    </footer>
+
+    <script>
+        (function () {
+            var imgs = Array.prototype.slice.call(document.querySelectorAll('.photo-grid img'));
+            var lightbox = document.getElementById('lightbox');
+            var lightboxImg = document.getElementById('lightbox-img');
+            var current = 0;
+
+            function open(index) {
+                current = index;
+                lightboxImg.src = imgs[current].src;
+                lightboxImg.alt = imgs[current].alt;
+                lightbox.classList.add('is-open');
+            }
+
+            function close() {
+                lightbox.classList.remove('is-open');
+                lightboxImg.src = '';
+            }
+
+            function show(delta) {
+                current = (current + delta + imgs.length) % imgs.length;
+                lightboxImg.src = imgs[current].src;
+                lightboxImg.alt = imgs[current].alt;
+            }
+
+            imgs.forEach(function (img, i) {
+                img.addEventListener('click', function () { open(i); });
+            });
+
+            document.getElementById('lightbox-close').addEventListener('click', close);
+            document.getElementById('lightbox-prev').addEventListener('click', function () { show(-1); });
+            document.getElementById('lightbox-next').addEventListener('click', function () { show(1); });
+
+            lightbox.addEventListener('click', function (e) {
+                if (e.target === lightbox) close();
+            });
+
+            document.addEventListener('keydown', function (e) {
+                if (!lightbox.classList.contains('is-open')) return;
+                if (e.key === 'Escape') close();
+                if (e.key === 'ArrowLeft') show(-1);
+                if (e.key === 'ArrowRight') show(1);
+            });
+        })();
+    </script>
+</body>
+
+</html>

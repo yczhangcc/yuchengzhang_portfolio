@@ -20,8 +20,8 @@
 \addtolength{\oddsidemargin}{-0.58in}
 \addtolength{\evensidemargin}{-0.58in}
 \addtolength{\textwidth}{1.16in}
-\addtolength{\topmargin}{-0.66in}
-\addtolength{\textheight}{1.38in}
+\addtolength{\topmargin}{-0.70in}
+\addtolength{\textheight}{1.46in}
 
 \urlstyle{same}
 \raggedbottom
@@ -31,18 +31,18 @@
 
 \titleformat{\section}{\vspace{-8pt}\scshape\raggedright\normalsize}{}{0em}{}[\color{black}\titlerule\vspace{-4pt}]
 
-\newcommand{\resumeItem}[1]{\item\footnotesize{#1\vspace{-2pt}}}
+\newcommand{\resumeItem}[1]{\item\footnotesize{#1\vspace{-3pt}}}
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.985\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & \small #2 \\
       \textit{\small #3} & \small #4 \\
-    \end{tabular*}\vspace{-4pt}
+    \end{tabular*}\vspace{-5pt}
 }
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.11in,label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2pt}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.17in,itemsep=1.5pt,topsep=2pt,label=\raisebox{0.2ex}{\tiny$\bullet$}]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-3pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.17in,itemsep=0.6pt,topsep=1pt,label=\raisebox{0.2ex}{\tiny$\bullet$}]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
 
 \begin{document}
 
@@ -64,43 +64,40 @@
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.11in,label={},topsep=1pt,itemsep=0pt]
 \footnotesize\item{
-\textbf{Machine Learning:} Scikit-learn, PyTorch, TensorFlow, classification, feature engineering, model evaluation, ROC/AUC, backtesting \\
-\textbf{Generative AI:} OpenAI, Gemini, Claude, LangChain, CrewAI, prompt design, context filtering, LLM evaluation \\
-\textbf{Data Science:} Pandas, NumPy, R, MATLAB, MNE, ggplot2, statistics, permutation-based FDR, visualization \\
-\textbf{Data/Cloud:} SQL Server, PostgreSQL, Azure Synapse, Databricks, Delta Lake, AWS, Docker, Power BI, Linux \\
-\textbf{Domains:} Credit risk, fraud detection, bioinformatics, EEG/fNIRS, computer vision, financial analysis
+\textbf{ML/AI:} Scikit-learn, PyTorch, TensorFlow, classification, feature engineering, model evaluation, ROC/AUC, backtesting \\
+\textbf{LLM Systems:} OpenAI, Gemini, Claude, Large Language Models (LLMs), LangChain, CrewAI, prompt design, context filtering, LLM evaluation \\
+\textbf{Data Science:} Pandas, NumPy, R, MATLAB, MNE, ggplot2, statistics, permutation-based FDR, bioinformatics, EEG/fNIRS \\
+\textbf{Data/Cloud:} SQL Server, PostgreSQL, Azure Synapse, Databricks, Delta Lake, AWS, Docker, Power BI, Linux
 }
 \end{itemize}
 \vspace{-7pt}
 
 \section{Machine Learning, AI, and Data Experience}
 \resumeSubHeadingListStart
-\resumeSubheading{CodeAssist -- AI Feedback System \href{https://github.com/kiat/codeAssist}{\textbar\ GitHub}}{Aug. 2025 -- Present}{University of Texas at Austin \textbar\ Flask, React, PostgreSQL, OpenAI, Gemini, Claude}{Austin, TX}
+\resumeSubheading{CodeAssist -- Full-Stack AI Feedback System \href{https://github.com/kiat/codeAssist}{\textbar\ GitHub}}{Aug. 2025 -- Present}{University of Texas at Austin \textbar\ Flask, React, PostgreSQL, OpenAI, Gemini, Claude}{Austin, TX}
 \resumeItemListStart
-\resumeItem{Built assignment-level AI feedback controls for prompt templates, context permissions, model settings, request limits, and cooldown policies.}
-\resumeItem{Implemented LLM context-filtering logic so only instructor-approved assignment descriptions, student code, test results, test cases, and student output are sent to AI providers.}
-\resumeItem{Standardized multi-provider AI workflows across OpenAI, Gemini, Claude, and local models, including model selection, API configuration, and timeout handling.}
+\resumeItem{Developed a full-stack AI feedback platform for programming courses, integrating code editing, file uploads, submissions, and AI chat feedback for debugging, algorithm complexity, implementation ideas, and test-case reasoning.}
+\resumeItem{Designed assignment-level AI controls so instructors can configure prompt templates, permitted context sources, model providers, request limits, and cooldown policies for course-specific feedback.}
+\resumeItem{Implemented context-filtering pipelines that selectively pass assignment descriptions, code, uploaded files, tests, execution results, and output to OpenAI, Gemini, Claude, or local models.}
 \resumeItemListEnd
 
 \resumeSubheading{Enterprise Risk Analyst Intern}{May 2025 -- Dec. 2025}{Toyota Industries Commercial Finance \textbar\ Python, SQL, Azure, Power BI}{Dallas, TX}
 \resumeItemListStart
-\resumeItem{Built an end-to-end credit-risk modeling pipeline from SQL Server data, spanning ETL, credit-feature engineering, Logistic Regression, Random Forest training, and validation.}
-\resumeItem{Engineered features including PayNet inquiries, loan-to-value ratios, account tenure, and asset-segment signals for trucks, trailers, and used-vehicle loans.}
-\resumeItem{Validated models with ROC/AUC, confusion matrices, and feature importance, achieving \textbf{AUC $>$ 0.82} and improving high-risk case identification by approximately \textbf{3--4\%}.}
+\resumeItem{Integrated PayNet inquiries and internal loan servicing data through SQL Server ETL, then engineered borrower, contract, and asset features including LTV, tenure, inquiry patterns, vehicle segments, and servicing attributes.}
+\resumeItem{Trained Logistic Regression and Random Forest credit-risk models, validating ROC/AUC, confusion matrices, and feature importance to achieve \textbf{AUC $>$ 0.82} and improve high-risk case identification by \textbf{3--4\%}.}
 \resumeItem{Backtested predicted risk buckets against observed outcomes, identifying up to \textbf{3.7$\times$ higher default rates} in high-risk groups and informing credit scorecard refinements.}
 \resumeItemListEnd
 
-\resumeSubheading{Researcher \& TA -- Biological Data Analytics}{Jan. 2024 -- Dec. 2024}{University of Texas at Austin \textbar\ R, Linux, AWS, Docker}{Austin, TX}
+\resumeSubheading{Echo -- Interactive AI Voice Simulation System}{Jun. 2026 -- Present}{University of Texas at Austin \textbar\ Mentor: Prof. Bo Xie \textbar\ Next.js, TypeScript, OpenAI API}{Austin, TX}
 \resumeItemListStart
-\resumeItem{Processed \textbf{250GB} of RNA-seq data with Salmon, RSEM, Trinity, and samtools, achieving a \textbf{98.7\% mapping rate} across reproducible pipelines.}
-\resumeItem{Performed Voom/Limma differential-expression analysis, identifying 48 key genes across time-series samples with permutation-based FDR.}
-\resumeItem{Automated normalization, PCA, and volcano-plot workflows in R and ggplot2, improving interpretation efficiency by 15\%.}
+\resumeItem{Built an event-driven voice simulation system that generates context-aware responses from user pauses, errors, skipped fields, and task switching using session state, trigger rules, browser TTS, and OpenAI APIs.}
+\resumeItem{Designed cooldown, interval, and event-priority logic to prevent repetitive playback and keep generated responses tied to task state and interaction timing.}
 \resumeItemListEnd
 
-\resumeSubheading{FinChat -- AI-Powered Financial Analysis System}{Jan. 2023 -- May 2024}{Southern Methodist University \textbar\ Python, FinGPT, LangChain, CrewAI}{Remote}
+\resumeSubheading{FinChat -- AI-Powered Financial Analysis System}{Jan. 2023 -- May 2024}{Southern Methodist University \textbar\ Python, FinGPT, LangChain, CrewAI}{Dallas, TX (Remote Hybrid)}
 \resumeItemListStart
-\resumeItem{Built LLM workflows for financial report analysis, extracting and processing 100+ SEC filings from EDGAR into a scalable data lake.}
-\resumeItem{Integrated FinGPT, LangChain, and CrewAI components for metric extraction, trend detection, and contextual financial interpretation, improving filing-analysis consistency by 3\%.}
+\resumeItem{Built LLM workflows for financial report analysis, extracting and processing 100+ SEC filings from EDGAR into structured data for metric extraction, trend detection, and company-level comparison.}
+\resumeItem{Integrated FinGPT, LangChain, and CrewAI components for contextual financial interpretation, improving filing-analysis accuracy by 3\% and reducing manual review time.}
 \resumeItemListEnd
 
 \resumeSubheading{Data Scientist Assistant Intern -- Image Restoration}{Jul. 2023 -- Sep. 2023}{Chinese Academy of Sciences \textbar\ TensorFlow, Cloud, GFPGAN}{Beijing, China}
@@ -112,22 +109,25 @@
 
 \section{Research Projects and Publications}
 \resumeSubHeadingListStart
+\resumeSubheading{Researcher \& TA -- Biological Data Analytics}{Jan. 2024 -- Dec. 2024}{University of Texas at Austin \textbar\ R, Linux, AWS, Docker}{Austin, TX}
+\resumeItemListStart
+\resumeItem{Processed \textbf{250GB} of RNA-seq data with Salmon, RSEM, Trinity, and samtools, achieving a \textbf{98.7\% mapping rate} across reproducible R/Linux pipelines.}
+\resumeItem{Performed Voom/Limma differential-expression analysis, identified 48 key genes with permutation-based FDR, and automated normalization, PCA, and volcano-plot workflows in R.}
+\resumeItemListEnd
+
 \resumeSubheading{Neuroengineering Lab -- Machine Learning Research Assistant}{Jan. 2023 -- May 2024}{Python, MATLAB, MNE, RF, SVM, KNN, XGBoost}{Remote}
 \resumeItemListStart
-\resumeItem{Processed \textbf{35GB} of EEG/fNIRS data for signal cleaning, feature extraction, connectivity analysis, and statistical testing; contributed to Frontiers and IEEE publications.}
-\resumeItem{Evaluated emotion-recognition models using RF, SVM, KNN, and XGBoost to compare model behavior across EEG-derived features and experimental conditions.}
+\resumeItem{Processed \textbf{35GB} of EEG/fNIRS data for signal cleaning, feature extraction, connectivity analysis, statistical testing, and emotion-recognition model evaluation with RF, SVM, KNN, and XGBoost.}
 \resumeItemListEnd
-\resumeSubheading{Kiwifruit Quality Grading -- Machine Learning Member \href{https://doi.org/10.1016/j.eswa.2025.129507}{\textbar\ Paper}}{Aug. 2022 -- May 2024}{Computer Vision, Feature Fusion, Model Evaluation}{Published 2025}
+\resumeSubheading{Kiwifruit Quality Grading -- Machine Learning Member \href{https://doi.org/10.1016/j.eswa.2025.129507}{\textbar\ Paper}}{Aug. 2022 -- May 2024}{Huazhong Agricultural University \textbar\ Computer Vision, Feature Fusion}{Wuhan, China (Hybrid)}
 \resumeItemListStart
-\resumeItem{Contributed to image-based grading with color, texture, shape, and fusion features; benchmarked models for a paper published in \textit{Expert Systems with Applications}.}
-\resumeItem{Compared feature combinations to optimize grading accuracy and interpret model behavior for the paper's ML methodology section.}
+\resumeItem{Contributed to image-based grading with color, texture, shape, and fusion features; benchmarked feature combinations for a paper published in \textit{Expert Systems with Applications}.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
 \section{Selected Publications}
-\begin{itemize}[leftmargin=0.17in,itemsep=1pt,topsep=2pt,label=\raisebox{0.2ex}{\tiny$\bullet$}]
-\resumeItem{\href{https://doi.org/10.1016/j.eswa.2025.129507}{\textit{Expert Systems with Applications} (2025)}: kiwifruit quality grading using image multi-feature fusion and ResTNet.}
-\resumeItem{\href{https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2024.1358167/full}{\textit{Frontiers in Neurology} (2024)} and \href{https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1269359/full}{\textit{Frontiers in Neuroscience} (2023)}: EEG/fNIRS cognitive impairment and digital therapy studies.}
+\begin{itemize}[leftmargin=0.17in,itemsep=0.4pt,topsep=1pt,label=\raisebox{0.2ex}{\tiny$\bullet$}]
+\resumeItem{\textbf{5 peer-reviewed publications} across computer vision, neuroscience, and social science research: \href{https://doi.org/10.1016/j.eswa.2025.129507}{\textit{Expert Systems with Applications} (2025)}, \href{https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2024.1358167/full}{\textit{Frontiers in Neurology} (2024)}, \href{https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1269359/full}{\textit{Frontiers in Neuroscience} (2023)}, and \href{https://ieeexplore.ieee.org/abstract/document/10257784}{IEEE ICIPCA (2023)} on EEG-based emotion recognition using machine learning.}
 \end{itemize}
 \vspace{-6pt}
 

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painting | Yucheng (Cecilia) Zhang</title>
+    <meta name="description" content="Painting gallery for Yucheng (Cecilia) Zhang: oil and acrylic studies.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400..560&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="gallery-page">
+    <header class="gallery-hero painting-hero">
+        <div class="gallery-hero-inner">
+            <a href="../index.html#creative" class="back-link">Back to portfolio</a>
+            <p class="eyebrow">Creative Work</p>
+            <h1>Painting</h1>
+            <p>
+                A slower way to think about structure: color relationships, surface, gesture,
+                and how small choices change the mood of a piece.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section class="gallery-intro">
+            <div class="section-kicker">Studio Notes</div>
+            <h2>Color, form, and visual experiments.</h2>
+            <p class="gallery-count">11 paintings</p>
+        </section>
+
+        <section class="photo-grid" aria-label="Painting">
+            <figure><img src="painting-01.jpg" alt="Painting 1" loading="lazy" width="768" height="1024"></figure>
+            <figure><img src="painting-02.jpg" alt="Painting 2" loading="lazy" width="1457" height="1080"></figure>
+            <figure><img src="painting-03.jpg" alt="Painting 3" loading="lazy" width="1440" height="1080"></figure>
+            <figure><img src="painting-04.jpg" alt="Painting 4" loading="lazy" width="1495" height="1080"></figure>
+            <figure><img src="painting-05.jpg" alt="Painting 5" loading="lazy" width="1397" height="1080"></figure>
+            <figure><img src="painting-06.jpg" alt="Painting 6" loading="lazy" width="768" height="1024"></figure>
+            <figure><img src="painting-07.jpg" alt="Painting 7" loading="lazy" width="1080" height="1244"></figure>
+            <figure><img src="painting-08.jpg" alt="Painting 8" loading="lazy" width="1024" height="768"></figure>
+            <figure><img src="painting-09.jpg" alt="Painting 9" loading="lazy" width="1024" height="768"></figure>
+            <figure><img src="painting-10.jpg" alt="Painting 10" loading="lazy" width="1289" height="974"></figure>
+            <figure><img src="painting-11.jpg" alt="Painting 11" loading="lazy" width="1024" height="768"></figure>
+        </section>
+    </main>
+
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close">&#10005;</button>
+        <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous">&#8249;</button>
+        <img id="lightbox-img" src="" alt="">
+        <button class="lightbox-next" id="lightbox-next" aria-label="Next">&#8250;</button>
+    </div>
+
+    <footer>
+        <p>2026 Yucheng (Cecilia) Zhang</p>
+    </footer>
+
+    <script>
+        (function () {
+            var imgs = Array.prototype.slice.call(document.querySelectorAll('.photo-grid img'));
+            var lightbox = document.getElementById('lightbox');
+            var lightboxImg = document.getElementById('lightbox-img');
+            var current = 0;
+
+            function open(index) {
+                current = index;
+                lightboxImg.src = imgs[current].src;
+                lightboxImg.alt = imgs[current].alt;
+                lightbox.classList.add('is-open');
+            }
+
+            function close() {
+                lightbox.classList.remove('is-open');
+                lightboxImg.src = '';
+            }
+
+            function show(delta) {
+                current = (current + delta + imgs.length) % imgs.length;
+                lightboxImg.src = imgs[current].src;
+                lightboxImg.alt = imgs[current].alt;
+            }
+
+            imgs.forEach(function (img, i) {
+                img.addEventListener('click', function () { open(i); });
+            });
+
+            document.getElementById('lightbox-close').addEventListener('click', close);
+            document.getElementById('lightbox-prev').addEventListener('click', function () { show(-1); });
+            document.getElementById('lightbox-next').addEventListener('click', function () { show(1); });
+
+            lightbox.addEventListener('click', function (e) {
+                if (e.target === lightbox) close();
+            });
+
+            document.addEventListener('keydown', function (e) {
+                if (!lightbox.classList.contains('is-open')) return;
+                if (e.key === 'Escape') close();
+                if (e.key === 'ArrowLeft') show(-1);
+                if (e.key === 'ArrowRight') show(1);
+            });
+        })();
+    </script>
+</body>
+
+</html>
