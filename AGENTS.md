@@ -42,6 +42,37 @@ Avoid generic AI-sounding phrases such as `leveraged cutting-edge technology`, `
 
 Prefer concrete language: implemented API validation, designed database schema, automated model refresh workflow, reduced manual reporting effort, filtered LLM context before provider calls.
 
+## Resume Layout, Density, and Ordering
+
+Order all experience and project entries in reverse chronological order by end date. Current or `Present` entries come first. For completed entries, use the end date as the primary ordering rule; if two entries have the same end date, use start date or target-role relevance as the tiebreaker.
+
+Use a role-specific bullet hierarchy instead of giving every entry the same weight:
+
+- Very important or target-defining entries: 4-5 bullets, using the strongest truthful technical details and results.
+- Normal/common entries: 3 bullets. If an experience or project is substantial enough to appear as a normal standalone entry, it should usually explain context, method, and outcome across 3 bullets.
+- Low-priority or supporting entries: 2 bullets only when the entry is clearly secondary for that target resume and more detail would dilute the main story.
+
+Avoid listing a project as a one-bullet placeholder; either give it enough substance, combine it with another section, or omit it for that targeted version.
+
+For important entries, include enough detail for a recruiter or manager to understand:
+
+- problem or context
+- data, system, or users involved
+- technical method
+- evaluation, result, or measurable impact
+
+Use page space deliberately. A targeted one-page resume should feel full and useful, not sparse; avoid leaving a large blank area at the bottom when truthful relevant content is available. Aim for roughly 90-95% page utilization while preserving readability. Do not fill space with fake, weak, or repetitive content.
+
+Targeted application resumes must remain one page unless the user explicitly asks for a longer version. If a targeted resume spills past one page, first remove the least related project or experience for that role, then tighten layout and wording. Do not leave a few lines on a second page. The master website CV is the exception and should remain a polished full 2-page document unless the user changes that strategy.
+
+Keep the education/header area compact on targeted resumes. School, degree, dates, location, GPA, and relevant coursework can be condensed when needed to protect space for stronger experience and project bullets.
+
+Leave a small, consistent visual gap after each experience or project entry so the resume is easy to scan. Avoid both extremes: entries should not run together, but spacing should not create large empty blocks.
+
+Avoid awkward line endings. If a bullet wraps with only one or two words on the final line, revise the wording so the line is better filled or the bullet becomes a clean two-line bullet. Keep most bullets to 1-2 lines unless the entry is especially important.
+
+For company-specific resumes, tailor emphasis to the job description while preserving factual accuracy. The most relevant experiences should receive the most detail; less relevant entries should be shorter or omitted.
+
 ## Resume Versions
 
 ### Master CV
@@ -150,6 +181,8 @@ Avoid hacker themes, excessive animations, generic developer templates, and deco
 Recommended sections: Home, About, Research, Engineering, Publications, Photography, Painting, Resume, Contact.
 
 Photography and painting are part of Cecilia's identity. Keep them visually connected to the portfolio but separate from engineering content.
+
+On the website, project and experience cards should also generally follow reverse chronological order by end date, unless a section is explicitly curated for featured work. If a featured item is pinned out of order, make sure the surrounding structure still feels intentional and easy to scan.
 
 ## Code Rules
 

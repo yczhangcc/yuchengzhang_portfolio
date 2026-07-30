@@ -4,7 +4,7 @@
 % Master CV for portfolio website
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage[usenames,dvipsnames]{color}
@@ -15,6 +15,9 @@
 \ifdefined\pdfgentounicode
   \input{glyphtounicode}
   \pdfgentounicode=1
+\fi
+\ifdefined\XeTeXgenerateactualtext
+  \XeTeXgenerateactualtext=1
 \fi
 
 \pagestyle{fancy}
@@ -47,7 +50,7 @@
 }
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.11in,label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2pt}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.17in,itemsep=1.5pt,topsep=2pt,label=\raisebox{0.2ex}{\tiny$\bullet$}]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.17in,itemsep=1.5pt,topsep=2pt,label={$\bullet$}]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
 
 \begin{document}
@@ -63,7 +66,7 @@
 
 \section{Education}
 \resumeSubHeadingListStart
-\resumeSubheading{Northwestern University}{Aug. 2026 -- May 2028}{M.S. in Computer Science}{Evanston, IL}
+\resumeSubheading{Northwestern University}{Sep. 2026 -- May 2028}{M.S. in Computer Science}{Evanston, IL}
 \resumeSubheading{The University of Texas at Austin}{Aug. 2023 -- May 2026}{B.S. in Mathematics, Minor in Computer Science \textbar\ GPA: 3.74/4.00}{Austin, TX}
 \resumeSubHeadingListEnd
 \vspace{-3pt}
@@ -119,6 +122,7 @@
 \resumeItemListStart
 \resumeItem{Built an event-driven voice simulation system that generates context-aware responses from user pauses, errors, skipped fields, and task switching using session state, trigger rules, browser TTS, and OpenAI APIs.}
 \resumeItem{Designed cooldown, interval, and event-priority logic to prevent repetitive playback and make voice feedback responsive to task state, interaction timing, and user behavior.}
+\resumeItem{Modularized prompt templates and event-trigger logic so new voice events and task types can be added without changing the core session controller.}
 \resumeItemListEnd
 
 \newpage
@@ -129,6 +133,7 @@
 \resumeItem{Developed Flask REST APIs and PostgreSQL models for AI feedback settings, instructor controls, request limits, cooldown policies, role-based access, JSON serialization, and Alembic-backed schema changes.}
 \resumeItem{Implemented LLM context filtering so assignment descriptions, student code, uploaded files, test cases, execution results, and student output are shared only when allowed by instructor-defined policies.}
 \resumeItem{Standardized provider workflows across OpenAI, Gemini, Claude, and local models, including model selection, API configuration, timeout handling, and assignment-level prompt behavior.}
+\resumeItem{Analyzed Docker-based autograder bottlenecks and scoped async grading with job status tracking, timing metrics, timeout handling, and isolated submission/result paths.}
 \resumeItemListEnd
 
 \resumeSubheading{Researcher \& TA -- Biological Data Analytics}{Jan. 2024 -- Dec. 2024}{University of Texas at Austin \textbar\ Mentor: Prof. Becca Young \textbar\ R, Linux, AWS, Docker}{Austin, TX}
@@ -146,31 +151,33 @@
 \resumeItem{Collaborated with a cross-university research team to connect FinGPT-based retrieval, filing preprocessing, and financial-question workflows into a reusable analysis prototype.}
 \resumeItemListEnd
 
-\resumeSubheading{Kiwifruit Quality Grading Project -- Machine Learning Member}{Aug. 2022 -- May 2024}{Huazhong Agricultural University \textbar\ Mentor: Prof. Yan Tong \textbar\ Python, Computer Vision}{Wuhan, China (Hybrid)}
-\resumeItemListStart
-\resumeItem{Contributed to an automated fruit grading pipeline using color, texture, shape, and feature-fusion methods; benchmarked model variants and analyzed results for the ML methodology section.}
-\resumeItem{Compared feature combinations to improve grading accuracy and interpretation for research later published in \textit{Expert Systems with Applications}.}
-\resumeItemListEnd
-
 \resumeSubheading{Machine Learning Research Assistant -- Neuroengineering Lab}{Jan. 2023 -- May 2024}{Remote \textbar\ Mentor: Dr. Kunqiang Qing \textbar\ Python, MATLAB, MNE}{Remote}
 \resumeItemListStart
 \resumeItem{Processed \textbf{35GB} of multimodal EEG/fNIRS data for signal cleaning, visualization, feature extraction, connectivity analysis, and statistical testing.}
 \resumeItem{Applied statistical tests and feature-extraction methods to evaluate cognitive impairment patterns and emotion-recognition signals across experimental conditions.}
 \resumeItem{Evaluated RF, SVM, KNN, and XGBoost models, contributing to peer-reviewed work in \textit{Frontiers in Neurology}, \textit{Frontiers in Neuroscience}, and IEEE ICIPCA.}
 \resumeItemListEnd
+
+\resumeSubheading{Kiwifruit Quality Grading Project -- Machine Learning Member}{Aug. 2022 -- May 2024}{Huazhong Agricultural University \textbar\ Mentor: Prof. Yan Tong \textbar\ Python, Computer Vision}{Wuhan, China (Hybrid)}
+\resumeItemListStart
+\resumeItem{Contributed to an automated fruit grading pipeline using color, texture, shape, and feature-fusion methods; benchmarked model variants and analyzed results for the ML methodology section.}
+\resumeItem{Compared feature combinations to improve grading accuracy and interpretation for research later published in \textit{Expert Systems with Applications}.}
+\resumeItem{Supported result interpretation for the published study by organizing feature-level evidence around image-based kiwifruit quality grading.}
+\resumeItemListEnd
 \resumeSubHeadingListEnd
 
 \section{Leadership and Community}
 \resumeSubHeadingListStart
-\resumeSubheading{Leader -- Austin Chinese Campus Christian Fellowship}{Aug. 2023 -- Jun. 2026}{University of Texas at Austin}{Austin, TX}
-\resumeItemListStart
-\resumeItem{Organized weekly Bible studies, retreats, hiking trips, and cultural celebrations; coordinated transportation and scheduling to improve group communication and inclusion.}
-\resumeItem{Facilitated small-group discussions and welcomed new members through consistent event planning, follow-up communication, and peer support for students joining the group.}
-\resumeItemListEnd
 \resumeSubheading{Volunteer -- Art From the Streets}{Jan. 2026 -- Present}{Community art programming for artists experiencing homelessness or housing insecurity}{Austin, TX}
 \resumeItemListStart
 \resumeItem{Supported event preparation, artwork organization, and visitor engagement for community exhibitions featuring artists experiencing homelessness or housing insecurity.}
 \resumeItem{Assisted volunteers and visitors during public art events, helping maintain a respectful and welcoming environment for participating artists and community guests.}
+\resumeItemListEnd
+
+\resumeSubheading{Leader -- Austin Chinese Campus Christian Fellowship}{Aug. 2023 -- Jun. 2026}{University of Texas at Austin}{Austin, TX}
+\resumeItemListStart
+\resumeItem{Organized weekly Bible studies, retreats, hiking trips, and cultural celebrations; coordinated transportation and scheduling to improve group communication and inclusion.}
+\resumeItem{Facilitated small-group discussions and welcomed new members through consistent event planning, follow-up communication, and peer support for students joining the group.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 

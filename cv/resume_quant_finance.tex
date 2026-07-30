@@ -10,6 +10,9 @@
   \input{glyphtounicode}
   \pdfgentounicode=1
 \fi
+\ifdefined\XeTeXgenerateactualtext
+  \XeTeXgenerateactualtext=1
+\fi
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -41,7 +44,7 @@
 }
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.11in,label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2pt}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.17in,itemsep=1.5pt,topsep=2pt,label=\raisebox{0.2ex}{\tiny$\bullet$}]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.17in,itemsep=1.5pt,topsep=2pt,label={$\bullet$}]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{1pt}}
 
 \begin{document}
@@ -56,26 +59,27 @@
 \vspace{-8pt}
 
 \section{Education}
-\resumeSubHeadingListStart
-\resumeSubheading{Northwestern University}{Aug. 2026 -- May 2028}{M.S. in Computer Science}{Evanston, IL}
-\resumeSubheading{The University of Texas at Austin}{Aug. 2023 -- May 2026}{B.S. in Mathematics, Minor in Computer Science \textbar\ GPA: 3.74/4.00}{Austin, TX}
-\resumeSubHeadingListEnd
-\vspace{-3pt}
+{\small
+\begin{tabular*}{0.985\textwidth}[t]{l@{\extracolsep{\fill}}r}
+\textbf{Northwestern University}, M.S. Computer Science & Sep. 2026 -- May 2028, Evanston, IL \\
+\textbf{The University of Texas at Austin}, B.S. Mathematics; CS Minor; GPA: 3.74/4.00 & Aug. 2023 -- May 2026, Austin, TX \\
+\end{tabular*}}
+\vspace{-2pt}
 \footnotesize{\textbf{Relevant Coursework:} Stochastic Processes, Probability and Statistics, Real Analysis, Data Analytics, Database Systems, Artificial Intelligence}
 \vspace{-5pt}
 
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.11in,label={},topsep=1pt,itemsep=0pt]
 \footnotesize\item{
-\textbf{Analytics/Modeling:} Credit risk, predictive modeling, statistical analysis, feature engineering, model validation, backtesting, ROC/AUC \\
-\textbf{Languages/Tools:} Python, SQL, R, MATLAB, SAS, Power BI, Git, Excel (reconciliation, validation, reporting) \\
-\textbf{Data Platforms:} SQL Server, Oracle, PostgreSQL, Azure Synapse, Databricks, Delta Lake, AWS, Docker \\
-\textbf{Financial Applications:} Credit risk modeling, fraud analytics, transaction monitoring, SEC filing analysis, customer risk scoring
+\textbf{Quant/ML:} Machine Learning, statistical modeling, predictive modeling, feature engineering, model validation, backtesting, ROC/AUC, classification \\
+\textbf{Programming:} Python, SQL, R, MATLAB, SAS; Pandas, NumPy, Scikit-learn, TensorFlow, Power BI, Git \\
+\textbf{Data/Research:} SQL Server, Oracle, PostgreSQL, transaction data, SEC filings, RNA-seq, EEG/fNIRS, data cleaning, experiment analysis \\
+\textbf{Financial Analytics:} Credit risk modeling, fraud analytics, transaction monitoring, risk segmentation, customer risk scoring
 }
 \end{itemize}
 \vspace{-7pt}
 
-\section{Risk and Financial Analytics Experience}
+\section{Experience}
 \resumeSubHeadingListStart
 \resumeSubheading{Enterprise Risk Analyst Intern}{May 2025 -- Dec. 2025}{Toyota Industries Commercial Finance \textbar\ Python, SQL Server, Azure, Power BI}{Dallas, TX}
 \resumeItemListStart
@@ -93,31 +97,37 @@
 \resumeItem{Developed a customer risk scoring engine by integrating transactional and behavioral data streams for fraud analytics, reviewer triage, and AML-related review workflows.}
 \resumeItemListEnd
 
-\resumeSubheading{FinChat -- AI-Powered Financial Analysis System}{Jan. 2023 -- May 2024}{Southern Methodist University \textbar\ Python, FinGPT, LangChain, CrewAI}{Dallas, TX (Remote Hybrid)}
-\resumeItemListStart
-\resumeItem{Built ETL pipelines to extract and process 100+ SEC filings from EDGAR, structuring unstructured financial data into a scalable data lake for metric extraction and trend detection.}
-\resumeItem{Implemented LangChain and CrewAI workflows for contextual financial interpretation, improving filing-analysis accuracy by 3\% and reducing manual review time for filing analysis.}
-\resumeItemListEnd
 \resumeSubHeadingListEnd
 
-\section{Additional Experience}
+\section{Projects}
 \resumeSubHeadingListStart
-\resumeSubheading{Software Engineering Intern -- Customer Analytics}{Nov. 2023 -- Jun. 2024}{Joblogic-X Corporation \textbar\ Python, APIs, Git}{Dallas, TX}
+\resumeSubheading{CodeAssist -- AI Feedback System \href{https://github.com/kiat/codeAssist}{\textbar\ GitHub}}{Aug. 2025 -- Present}{University of Texas at Austin \textbar\ Flask, React, PostgreSQL, OpenAI}{Austin, TX}
 \resumeItemListStart
-\resumeItem{Integrated social-media and transactional order data into a customer analytics pipeline for ranking customers, segmenting engagement patterns, and supporting marketing strategy.}
+\resumeItem{Built a full-stack AI feedback system for programming courses, connecting code editing, file uploads, submissions, and AI chat feedback for debugging, complexity reasoning, and test-case correctness.}
+\resumeItem{Developed Flask REST APIs and PostgreSQL models for AI feedback settings, student submissions, request limits, cooldown policies, JSON serialization, and role-based access.}
+\resumeItem{Analyzed Docker-based autograder bottlenecks and scoped async grading with job status tracking, timing metrics, timeout handling, and isolated submission/result paths.}
 \resumeItemListEnd
 
 \resumeSubheading{Researcher \& TA -- Biological Data Analytics}{Jan. 2024 -- Dec. 2024}{University of Texas at Austin \textbar\ R, Linux, AWS, Docker}{Austin, TX}
 \resumeItemListStart
 \resumeItem{Applied statistical modeling (differential-expression analysis, PCA, permutation-based FDR) to 250GB of RNA-seq data as a research TA, identifying 48 key genes across reproducible R/Linux pipelines.}
+\resumeItem{Automated normalization, PCA, and volcano-plot workflows in R/ggplot2, improving interpretation efficiency by 15\% for time-series biological datasets.}
+\resumeItem{Applied Salmon, RSEM, Trinity, and samtools for transcript quantification, achieving a \textbf{98.7\% mapping rate} across reproducible datasets.}
+\resumeItemListEnd
+
+\resumeSubheading{Neuroengineering Lab -- Machine Learning Research Assistant}{Jan. 2023 -- May 2024}{Python, MATLAB, MNE, RF, SVM, KNN, XGBoost}{Remote}
+\resumeItemListStart
+\resumeItem{Processed \textbf{35GB} of EEG/fNIRS data for signal cleaning, feature extraction, connectivity analysis, statistical testing, and emotion-recognition model evaluation.}
+\resumeItem{Applied statistical tests and feature-extraction methods to evaluate cognitive impairment patterns and emotion-recognition signals across experimental conditions.}
+\resumeItem{Evaluated RF, SVM, KNN, and XGBoost models across experimental conditions, contributing quantitative analysis used in peer-reviewed publications.}
+\resumeItemListEnd
+
+\resumeSubheading{FinChat -- AI-Powered Financial Analysis System}{Jan. 2023 -- May 2024}{Southern Methodist University \textbar\ Python, FinGPT, LangChain, CrewAI}{Dallas, TX (Remote Hybrid)}
+\resumeItemListStart
+\resumeItem{Built ETL pipelines to extract and process 100+ SEC filings from EDGAR, structuring unstructured financial data into a scalable data lake for metric extraction and trend detection.}
+\resumeItem{Implemented LangChain and CrewAI workflows for contextual financial interpretation, improving filing-analysis accuracy by 3\% and reducing manual review time for filing analysis.}
+\resumeItem{Connected filing preprocessing, retrieval, metric extraction, and financial-question workflows into a reusable prototype for comparing companies across reporting periods.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
-
-\section{Selected Research and Publications}
-\begin{itemize}[leftmargin=0.17in,itemsep=1pt,topsep=2pt,label=\raisebox{0.2ex}{\tiny$\bullet$}]
-\resumeItem{Coauthored \textbf{5 peer-reviewed publications} applying machine learning and statistical analysis to computer vision, neuroengineering, and social-media data.}
-\resumeItem{Selected venues include \href{https://doi.org/10.1016/j.eswa.2025.129507}{\textit{Expert Systems with Applications}}, \textit{Frontiers in Neurology}, \textit{Frontiers in Neuroscience}, and IEEE ICIPCA.}
-\end{itemize}
-\vspace{-6pt}
 
 \end{document}

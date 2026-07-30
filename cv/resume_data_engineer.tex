@@ -1,0 +1,139 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+
+\ifdefined\pdfgentounicode
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+\ifdefined\XeTeXgenerateactualtext
+  \XeTeXgenerateactualtext=1
+\fi
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.58in}
+\addtolength{\evensidemargin}{-0.58in}
+\addtolength{\textwidth}{1.16in}
+\addtolength{\topmargin}{-0.70in}
+\addtolength{\textheight}{1.46in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\footskip}{4.1pt}
+
+\titleformat{\section}{\vspace{-8pt}\scshape\raggedright\normalsize}{}{0em}{}[\color{black}\titlerule\vspace{-4pt}]
+
+\newcommand{\resumeItem}[1]{\item\footnotesize{#1\vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.985\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small #2 \\
+      \textit{\small #3} & \small #4 \\
+    \end{tabular*}\vspace{-4pt}
+}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.11in,label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.17in,itemsep=0.8pt,topsep=1pt,label={$\bullet$}]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-1pt}}
+
+\begin{document}
+
+\begin{center}
+{\Large\textbf{Yucheng (Cecilia) Zhang}}\\[-1pt]
+\small 737-343-4836 $|$ \href{mailto:ceciliayczhang@gmail.com}{ceciliayczhang@gmail.com} $|$
+\href{https://yczhangcc.github.io/yuchengzhang_portfolio/}{Portfolio} $|$
+\href{https://www.linkedin.com/in/yczcecilia/}{LinkedIn} $|$
+\href{https://github.com/yczhangcc}{GitHub}
+\end{center}
+\vspace{-8pt}
+
+\section{Education}
+{\small
+\begin{tabular*}{0.985\textwidth}[t]{l@{\extracolsep{\fill}}r}
+\textbf{Northwestern University}, M.S. Computer Science & Sep. 2026 -- May 2028, Evanston, IL \\
+\textbf{The University of Texas at Austin}, B.S. Mathematics; CS Minor; GPA: 3.74/4.00 & Aug. 2023 -- May 2026, Austin, TX \\
+\end{tabular*}}
+\vspace{-2pt}
+\footnotesize{\textbf{Relevant Coursework:} Data Structures, Database Systems, Data Analytics, Probability and Statistics, Stochastic Processes, Artificial Intelligence}
+\vspace{-5pt}
+
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.11in,label={},topsep=1pt,itemsep=0pt]
+\footnotesize\item{
+\textbf{Languages:} Python, SQL, R, Java, JavaScript, TypeScript, MATLAB, SAS \\
+\textbf{Data Engineering:} ETL pipelines, data ingestion, data transformation, data validation, reconciliation, feature pipelines, reporting automation \\
+\textbf{Databases \& Cloud:} SQL Server, PostgreSQL, Oracle, Azure Synapse, Databricks, Delta Lake, AWS, Docker \\
+\textbf{Tools \& Analytics:} Pandas, NumPy, Power BI, Git, REST API development, SQLAlchemy, Alembic, Excel, Scikit-learn
+}
+\end{itemize}
+\vspace{-7pt}
+
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{Enterprise Risk Analyst Intern}{May 2025 -- Dec. 2025}{Toyota Industries Commercial Finance \textbar\ Python, SQL Server, Azure, Power BI}{Dallas, TX}
+\resumeItemListStart
+\resumeItem{Built SQL Server ETL and reconciliation workflows integrating PayNet inquiries with internal loan servicing data for recurring credit-risk analytics and reporting.}
+\resumeItem{Engineered borrower, contract, and asset-level features including LTV ratio, account tenure, inquiry patterns, vehicle segments, and servicing attributes.}
+\resumeItem{Automated monthly model refreshes with parameterized SQL and Python workflows connected to Power BI dashboards, reducing manual reporting effort by 10\%.}
+\resumeItem{Validated Logistic Regression and Random Forest outputs with ROC/AUC and feature importance, achieving \textbf{AUC $>$ 0.82} and improving high-risk identification by \textbf{3--4\%}.}
+\resumeItem{Backtested predicted risk buckets against observed outcomes, identifying up to \textbf{3.7$\times$ higher default rates} in high-risk groups for scorecard validation.}
+\resumeItemListEnd
+
+\resumeSubheading{Financial Data Development Engineer -- Fraud Detection}{Jul. 2024 -- Aug. 2024}{Caitong Securities Ltd \textbar\ SQL, Oracle, Stored Procedures}{Hangzhou, China}
+\resumeItemListStart
+\resumeItem{Designed SQL ETL pipelines processing \textbf{10M+ daily transactions} with window functions, subqueries, and stored procedures, improving extraction efficiency by 5\%.}
+\resumeItem{Implemented fraud-detection logic and customer risk scoring from transactional and behavioral streams, reducing false positives by 2\% in daily monitoring workflows.}
+\resumeItem{Built reviewer-facing risk logic for fraud analytics and AML-related workflows, translating transaction patterns into prioritized risk signals for operational review.}
+\resumeItemListEnd
+
+\resumeSubheading{Software Engineering Intern -- Customer Analytics}{Nov. 2023 -- Jun. 2024}{Joblogic-X Corporation \textbar\ Python, APIs, Git}{Dallas, TX}
+\resumeItemListStart
+\resumeItem{Engineered a Python pipeline to scrape and process XHS social-media data, joining unstructured engagement signals with transactional order systems for customer analytics.}
+\resumeItem{Implemented ranking and clustering logic, integrated KOC scores through REST APIs, and maintained Git workflows for reproducible customer-priority updates.}
+\resumeItem{Connected ranking outputs to a customer-facing chatbot workflow, translating analytical scores into repeatable customer recommendation data.}
+\resumeItemListEnd
+
+\resumeSubheading{Data Scientist Assistant Intern -- Image Restoration}{Jul. 2023 -- Sep. 2023}{Chinese Academy of Sciences \textbar\ TensorFlow, Alibaba Cloud, GFPGAN}{Beijing, China}
+\resumeItemListStart
+\resumeItem{Deployed image-restoration modules on Alibaba Cloud via SSH, implementing VAE loss, Gaussian filters, and LSGAN functions for reconstruction workflows.}
+\resumeItem{Built a TensorFlow 2 CNN on 3.4k train/validation/test images, achieved \textbf{80\% accuracy} across 5 categories, and integrated GFPGAN APIs.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeSubheading{CodeAssist -- Full-Stack AI Feedback System \href{https://github.com/kiat/codeAssist}{\textbar\ GitHub}}{Aug. 2025 -- Present}{University of Texas at Austin \textbar\ Faculty Project \textbar\ Flask, React, PostgreSQL, Docker}{Austin, TX}
+\resumeItemListStart
+\resumeItem{Developed Flask REST APIs and PostgreSQL models for submissions, AI feedback requests, instructor settings, usage limits, cooldown policies, and role-based access.}
+\resumeItem{Implemented JSON serialization, backend validation, and Alembic schema changes to keep assignment, submission, and feedback data workflows reproducible.}
+\resumeItem{Built context filtering so code, uploaded files, tests, results, and outputs are sent to AI providers only when instructor policies allow them.}
+\resumeItem{Created local stress-test runners with server health checks, structured JSON reports, cleanup controls, and coverage for enrollment, submission, grading, and CRUD workflows.}
+\resumeItemListEnd
+
+\resumeSubheading{Researcher \& TA -- Biological Data Analytics}{Jan. 2024 -- Dec. 2024}{University of Texas at Austin \textbar\ R, Linux, AWS, Docker}{Austin, TX}
+\resumeItemListStart
+\resumeItem{Processed \textbf{250GB} of RNA-seq data with reproducible R/Linux workflows, applying Salmon, RSEM, Trinity, and samtools for transcript quantification.}
+\resumeItem{Achieved a \textbf{98.7\% mapping rate} and identified 48 key genes with Voom/Limma differential-expression analysis and permutation-based FDR.}
+\resumeItem{Automated normalization, PCA, and volcano-plot workflows in R/ggplot2, improving interpretation efficiency by 15\% for time-series biological datasets.}
+\resumeItemListEnd
+
+\resumeSubheading{FinChat -- AI-Powered Financial Analysis System}{Jan. 2023 -- May 2024}{Southern Methodist University \textbar\ Python, FinGPT, LangChain, CrewAI}{Dallas, TX (Remote Hybrid)}
+\resumeItemListStart
+\resumeItem{Built ETL workflows to extract and process 100+ SEC filings from EDGAR, structuring unstructured financial reports for metric extraction and trend detection.}
+\resumeItem{Implemented LangChain and CrewAI workflows for contextual financial interpretation, improving filing-analysis accuracy by 3\% and reducing manual review time.}
+\resumeItem{Connected filing preprocessing, retrieval, metric extraction, and financial-question workflows into a reusable prototype for comparing companies across reporting periods.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\end{document}
