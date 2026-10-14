@@ -404,6 +404,14 @@ li::marker {
     url("../painting/painting-01.jpg") center 30% / cover no-repeat;
 }
 
+.creative-aside {
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.05rem;
+}
+
 .creative-card span {
   font-family: var(--font-body);
   font-size: 0.78rem;
@@ -841,21 +849,10 @@ footer p {
     height: 112px;
   }
 
-  /* Phone: Full CV on top, then 2 + 3 link buttons */
   .hero-actions {
     display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
-  }
-
-  .hero-actions .button {
-    grid-column: span 2;
-    padding-left: 6px;
-    padding-right: 6px;
-  }
-
-  .hero-actions .button:nth-child(-n + 2) {
-    grid-column: span 3;
   }
 
   .hero-actions .button.primary {
