@@ -307,6 +307,11 @@ nav a:hover {
   grid-column: 1;
 }
 
+.work-card.featured > a {
+  justify-self: start;
+  align-self: start;
+}
+
 .work-card.featured ul {
   grid-column: 2;
   grid-row: 2 / span 3;
@@ -433,6 +438,12 @@ li::marker {
   max-width: 720px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.contact-note {
+  max-width: 620px;
+  margin: 0 auto 22px;
+  color: var(--muted);
 }
 
 .contact-email {
@@ -626,6 +637,7 @@ footer p {
   border-radius: 999px;
   margin-left: -3px;
   border: 1.5px solid var(--paper);
+  box-shadow: inset 0 0 0 1px rgba(31, 42, 46, 0.14);
 }
 
 @media (max-width: 560px) {
@@ -829,10 +841,21 @@ footer p {
     height: 112px;
   }
 
+  /* Phone: Full CV on top, then 2 + 3 link buttons */
   .hero-actions {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 8px;
+  }
+
+  .hero-actions .button {
+    grid-column: span 2;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .hero-actions .button:nth-child(-n + 2) {
+    grid-column: span 3;
   }
 
   .hero-actions .button.primary {
