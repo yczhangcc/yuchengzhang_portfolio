@@ -73,122 +73,89 @@
 
     <section id="work" class="section">
         <div class="section-kicker">Work</div>
-        <h2>Questions I've chased, and what I built to answer them.</h2>
+        <h2>Two projects that show how I build, plus the rest of the record.</h2>
 
         <div class="work-grid">
             <article class="work-card featured">
                 <div class="meta">UT Austin | Mentor: Prof. Kia Teymourian | Aug. 2025 - Present</div>
-                <h3>CodeAssist: Full-Stack AI Feedback System</h3>
-                <p class="question">How do you give students real AI help without handing them the answer?</p>
-                <dl class="flow">
-                    <div><dt>Data</dt><dd>Student code, uploaded files, test cases, and execution results from programming courses.</dd></div>
-                    <div><dt>Method</dt><dd>React + Flask + PostgreSQL system where instructors set prompt templates, context permissions, model providers (OpenAI, Gemini, Claude, local), usage limits, and cooldowns per assignment. LLM context is filtered before every provider call.</dd></div>
-                    <div><dt>Result</dt><dd>A working AI tutor for debugging, complexity, and test-case feedback that only sees what the instructor allows.</dd></div>
-                </dl>
+                <h3>CodeAssist - Full-Stack AI Feedback System</h3>
+                <p>
+                    CodeAssist is an AI feedback system for programming education. Students can
+                    write code through an editor, upload files, submit work, and use an AI chat
+                    interface to receive feedback on debugging, algorithm complexity, implementation
+                    ideas, and test-case correctness.
+                </p>
+                <ul>
+                    <li>Built assignment-level AI controls for prompt templates, context permissions, model providers, usage limits, and cooldown policies.</li>
+                    <li>Implemented Flask APIs, PostgreSQL models, SQLAlchemy logic, Alembic migrations, validation, and role-based access safeguards.</li>
+                    <li>Filtered LLM context so assignment descriptions, student code, uploaded files, test cases, execution results, and output are shared only under instructor-defined policies.</li>
+                </ul>
                 <a href="https://github.com/kiat/codeAssist" target="_blank" rel="noopener noreferrer">GitHub repository</a>
             </article>
 
             <article class="work-card featured">
                 <div class="meta">Toyota Industries Commercial Finance | Dallas, TX | May 2025 - Dec. 2025</div>
                 <h3>Enterprise Risk Analyst Intern</h3>
-                <p class="question">Which loans are going to go bad, and can we tell before they do?</p>
-                <dl class="flow">
-                    <div><dt>Data</dt><dd>PayNet credit inquiries joined with internal loan servicing records in SQL Server.</dd></div>
-                    <div><dt>Method</dt><dd>Borrower and asset feature engineering, Logistic Regression and Random Forest models, ROC/AUC validation, and backtesting of risk buckets.</dd></div>
-                    <div><dt>Result</dt><dd>AUC &gt; 0.82, up to 3.7x higher default rates caught in high-risk groups, and automated monthly refreshes with Power BI (10% less manual reporting).</dd></div>
-                </dl>
+                <p>
+                    End-to-end credit risk analytics pipeline integrating PayNet inquiries and
+                    internal loan servicing data, from SQL Server ETL and feature engineering
+                    through modeling, validation, and automated reporting.
+                </p>
+                <ul>
+                    <li>Validated Logistic Regression and Random Forest models with ROC/AUC and confusion matrices, achieving AUC &gt; 0.82 and improving high-risk case identification by 3-4%.</li>
+                    <li>Backtested predicted risk buckets against observed outcomes, finding up to 3.7x higher default rates in high-risk groups.</li>
+                    <li>Automated monthly model refreshes and Power BI reporting, cutting manual reporting effort by 10%.</li>
+                </ul>
             </article>
         </div>
 
         <div class="more-list">
             <article class="more-item">
                 <div class="more-item-head">
-                    <h3>Machine Learning Research Assistant, Neuroengineering Lab</h3>
+                    <h3>Machine Learning Research Assistant - Neuroengineering Lab</h3>
                     <span class="meta">Remote | Dr. Kunqiang Qing | Jan. 2023 - May 2024</span>
                 </div>
-                <div>
-                    <p class="question">Can brain signals show how cognition changes after a stroke, or what someone is feeling?</p>
-                    <dl class="flow compact">
-                        <div><dt>Data</dt><dd>35GB of multimodal EEG/fNIRS recordings</dd></div>
-                        <div><dt>Method</dt><dd>Signal cleaning, feature extraction, connectivity analysis; RF, SVM, KNN, XGBoost</dd></div>
-                        <div><dt>Result</dt><dd>3 peer-reviewed papers: <a href="https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2024.1358167/full" target="_blank" rel="noopener noreferrer"><em>Frontiers in Neurology</em></a>, <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1269359/full" target="_blank" rel="noopener noreferrer"><em>Frontiers in Neuroscience</em> (first author)</a>, <a href="https://ieeexplore.ieee.org/abstract/document/10257784" target="_blank" rel="noopener noreferrer">IEEE ICIPCA (sole author)</a></dd></div>
-                    </dl>
-                </div>
+                <p>Analyzed 35GB of multimodal EEG/fNIRS data for signal cleaning, connectivity analysis, and RF/SVM/KNN/XGBoost model evaluation on cognitive-impairment and emotion-recognition signals, contributing to three papers: <a href="https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2024.1358167/full" target="_blank" rel="noopener noreferrer"><em>Frontiers in Neurology</em> (2024)</a>, <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1269359/full" target="_blank" rel="noopener noreferrer"><em>Frontiers in Neuroscience</em> (2023, first author)</a>, and <a href="https://ieeexplore.ieee.org/abstract/document/10257784" target="_blank" rel="noopener noreferrer">IEEE ICIPCA (2023, sole author)</a>.</p>
             </article>
 
             <article class="more-item">
                 <div class="more-item-head">
-                    <h3>Kiwifruit Quality Grading, Machine Learning Member</h3>
+                    <h3>Kiwifruit Quality Grading - Machine Learning Member</h3>
                     <span class="meta">Huazhong Agricultural University | Wuhan, China (Hybrid) | Aug. 2022 - May 2024</span>
                 </div>
-                <div>
-                    <p class="question">Can a camera grade fruit as reliably as a trained eye?</p>
-                    <dl class="flow compact">
-                        <div><dt>Data</dt><dd>Images of kiwifruit across quality grades</dd></div>
-                        <div><dt>Method</dt><dd>Color, texture, and shape features fused with the ResTNet model; benchmarked feature combinations</dd></div>
-                        <div><dt>Result</dt><dd>Published in <a href="https://doi.org/10.1016/j.eswa.2025.129507" target="_blank" rel="noopener noreferrer"><em>Expert Systems with Applications</em></a></dd></div>
-                    </dl>
-                </div>
+                <p>Image-based fruit grading using color, texture, shape, and feature-fusion methods, contributing to a paper published in <em>Expert Systems with Applications</em>. <a href="https://doi.org/10.1016/j.eswa.2025.129507" target="_blank" rel="noopener noreferrer">Publication</a></p>
             </article>
 
             <article class="more-item">
                 <div class="more-item-head">
-                    <h3>Data Scientist Assistant Intern, Image Restoration</h3>
+                    <h3>Data Scientist Assistant Intern - Image Restoration</h3>
                     <span class="meta">Chinese Academy of Sciences | Beijing, China | Jul. 2023 - Sep. 2023</span>
                 </div>
-                <div>
-                    <p class="question">Can a model bring damaged photos and faces back automatically?</p>
-                    <dl class="flow compact">
-                        <div><dt>Data</dt><dd>3.4k images across 5 categories</dd></div>
-                        <div><dt>Method</dt><dd>TensorFlow CNN, VAE loss, LSGAN, and GFPGAN face restoration on Alibaba Cloud</dd></div>
-                        <div><dt>Result</dt><dd>80% classification accuracy and 5% lower processing cost</dd></div>
-                    </dl>
-                </div>
+                <p>Deployed image-restoration modules on Alibaba Cloud, implementing VAE loss, Gaussian filters, LSGAN components, a TensorFlow CNN, and GFPGAN restoration workflows.</p>
             </article>
 
             <article class="more-item">
                 <div class="more-item-head">
-                    <h3>Financial Data Development Engineer, Fraud Detection</h3>
+                    <h3>Financial Data Development Engineer - Fraud Detection</h3>
                     <span class="meta">Caitong Securities Ltd | Hangzhou, China | Jul. 2024 - Aug. 2024</span>
                 </div>
-                <div>
-                    <p class="question">How do you spot fraud hiding in 10 million transactions a day?</p>
-                    <dl class="flow compact">
-                        <div><dt>Data</dt><dd>10M+ daily securities transactions</dd></div>
-                        <div><dt>Method</dt><dd>SQL ETL with window functions, parameterized fraud rules, and a customer risk-scoring engine</dd></div>
-                        <div><dt>Result</dt><dd>2% fewer false positives and 5% faster extraction</dd></div>
-                    </dl>
-                </div>
+                <p>SQL ETL pipelines processing 10M+ daily transactions, with modular fraud-detection logic and a customer risk-scoring engine for transaction monitoring.</p>
             </article>
 
             <article class="more-item">
                 <div class="more-item-head">
-                    <h3>Software Engineering Intern, Customer Analytics</h3>
+                    <h3>Software Engineering Intern - Customer Analytics</h3>
                     <span class="meta">Joblogic-X Corporation | Dallas, TX | Nov. 2023 - Jun. 2024</span>
                 </div>
-                <div>
-                    <p class="question">Which everyday customers actually influence what other people buy?</p>
-                    <dl class="flow compact">
-                        <div><dt>Data</dt><dd>Xiaohongshu (XHS) social posts joined with order data</dd></div>
-                        <div><dt>Method</dt><dd>Python ranking and clustering to score key opinion consumers (KOCs)</dd></div>
-                        <div><dt>Result</dt><dd>KOC scoring served through REST APIs inside Meet Fresh's customer-facing chatbot</dd></div>
-                    </dl>
-                </div>
+                <p>Customer analytics pipeline combining social-media and order data, with ranking/clustering logic and a KOC scoring module integrated into a customer-facing chatbot.</p>
             </article>
 
             <article class="more-item">
                 <div class="more-item-head">
-                    <h3>Researcher &amp; TA, Biological Data Analytics</h3>
+                    <h3>Researcher &amp; TA - Biological Data Analytics</h3>
                     <span class="meta">UT Austin | Prof. Becca Young | Jan. 2024 - Dec. 2024</span>
                 </div>
-                <div>
-                    <p class="question">Which genes switch on over time, and how sure can we be?</p>
-                    <dl class="flow compact">
-                        <div><dt>Data</dt><dd>250GB of time-series RNA-seq data</dd></div>
-                        <div><dt>Method</dt><dd>Salmon/RSEM quantification, Voom/Limma, permutation-based FDR, PCA</dd></div>
-                        <div><dt>Result</dt><dd>48 key genes identified at a 98.7% mapping rate</dd></div>
-                    </dl>
-                </div>
+                <p>Processed 250GB of RNA-seq data, applying transcript quantification, Voom/Limma differential-expression analysis, permutation-based FDR, and PCA.</p>
             </article>
         </div>
     </section>
@@ -215,13 +182,8 @@
 
     <section id="contact" class="section contact-section">
         <div class="section-kicker">Contact</div>
-        <h2>Open to software engineering, AI/ML, data science, and risk analytics roles.</h2>
-        <p>Email: <a href="mailto:ceciliayczhang@gmail.com">ceciliayczhang@gmail.com</a></p>
-        <p>
-            <a href="https://www.linkedin.com/in/yczcecilia" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://github.com/yczhangcc" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://scholar.google.com/citations?user=Stx_NRQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-        </p>
+        <h2>Got a hard, interesting problem? I'd love to hear about it.</h2>
+        <a class="contact-email" href="mailto:ceciliayczhang@gmail.com">ceciliayczhang@gmail.com</a>
     </section>
 </main>
 

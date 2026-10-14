@@ -1,0 +1,106 @@
+.work-card.featured .meta,
+.work-card.featured h3,
+.work-card.featured .question,
+.work-card.featured > a {
+  grid-column: 1;
+}
+
+.work-card.featured .flow {
+  grid-column: 2;
+  grid-row: 1 / span 4;
+}
+
+.work-card.featured > a {
+  justify-self: start;
+  align-self: start;
+}
+
+/* Question -> Data -> Method -> Result */
+.question {
+  margin: 4px 0 18px;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 420;
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  line-height: 1.3;
+}
+
+.work-card p.question,
+.more-item p.question {
+  color: var(--ink);
+}
+
+.flow {
+  margin: 0;
+  display: grid;
+}
+
+.flow > div {
+  position: relative;
+  padding: 0 0 14px 22px;
+  border-left: 1px solid var(--line);
+}
+
+.flow > div::before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: 6px;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--sunflower);
+}
+
+.flow > div:last-child {
+  padding-bottom: 0;
+}
+
+.flow > div:last-child::before {
+  background: var(--accent);
+}
+
+.flow dt {
+  margin-bottom: 2px;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.flow dd {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.flow > div:last-child dd {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.more-item p.question {
+  margin: 0 0 14px;
+  font-size: 1.15rem;
+}
+
+.flow.compact {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.flow.compact > div {
+  padding: 10px 0 0;
+  border-left: 0;
+  border-top: 1px solid var(--line);
+}
+
+.flow.compact > div::before {
+  left: 0;
+  top: -4px;
+}
+
+.flow.compact dd {
+  font-size: 0.9rem;
+}

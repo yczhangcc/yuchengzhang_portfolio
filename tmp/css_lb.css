@@ -1,0 +1,58 @@
+.lightbox-figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+}
+
+.lightbox-caption {
+  width: min(640px, 100%);
+  padding-top: 16px;
+  color: #fffdf8;
+  text-align: center;
+}
+
+.lightbox-caption p {
+  margin: 0;
+}
+
+.lb-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.lightbox-caption .lb-meta {
+  margin-top: 2px;
+  color: rgba(255, 253, 248, 0.62);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.lightbox-caption .lb-note {
+  margin-top: 10px;
+  color: rgba(255, 253, 248, 0.86);
+  font-size: 0.95rem;
+}
+
+.lb-palette {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.lb-palette .swatches i {
+  width: 18px;
+  height: 18px;
+  border-color: rgba(15, 19, 21, 0.94);
+}
+
+.lb-kmeans {
+  color: rgba(255, 253, 248, 0.5);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+}
