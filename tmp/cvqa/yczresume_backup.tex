@@ -1,0 +1,196 @@
+%-------------------------
+% Resume in Latex
+% Author : Yucheng Zhang
+% Master CV for portfolio website
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+
+\ifdefined\pdfgentounicode
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+\ifdefined\XeTeXgenerateactualtext
+  \XeTeXgenerateactualtext=1
+\fi
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.57in}
+\addtolength{\evensidemargin}{-0.57in}
+\addtolength{\textwidth}{1.14in}
+\addtolength{\topmargin}{-0.63in}
+\addtolength{\textheight}{1.34in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\footskip}{4.1pt}
+
+\titleformat{\section}{\vspace{-8pt}\scshape\raggedright\normalsize}{}{0em}{}[\color{black}\titlerule\vspace{-4pt}]
+
+\newcommand{\resumeItem}[1]{\item\footnotesize{#1\vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.985\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small #2 \\
+      \textit{\small #3} & \small #4 \\
+    \end{tabular*}\vspace{-4pt}
+}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.11in,label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.17in,itemsep=1.5pt,topsep=2pt,label={$\bullet$}]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\begin{document}
+
+\begin{center}
+{\Large\textbf{Yucheng (Cecilia) Zhang}}\\[-1pt]
+\small 737-343-4836 $|$ \href{mailto:ceciliayczhang@gmail.com}{ceciliayczhang@gmail.com} $|$
+\href{https://yczhangcc.github.io/yuchengzhang_portfolio/}{Portfolio} $|$
+\href{https://www.linkedin.com/in/yczcecilia/}{linkedin.com/in/yczcecilia} $|$
+\href{https://github.com/yczhangcc}{github.com/yczhangcc}
+\end{center}
+\vspace{-8pt}
+
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading{Northwestern University}{Sep. 2026 -- May 2028}{M.S. in Computer Science}{Evanston, IL}
+\resumeSubheading{The University of Texas at Austin}{Aug. 2023 -- May 2026}{B.S. in Mathematics, Minor in Computer Science \textbar\ GPA: 3.74/4.00}{Austin, TX}
+\resumeSubHeadingListEnd
+\vspace{-3pt}
+\footnotesize{\textbf{Relevant Courses:} Data Structures, Stochastic Processes, Elements of Software Design, Data Analytics, Database Systems, Discrete Math, Real Analysis, Probability and Statistics, Artificial Intelligence, Elements of Networking}
+\vspace{-4pt}
+
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.11in,label={},topsep=1pt,itemsep=0pt]
+\footnotesize\item{
+\textbf{Languages:} Python, Java, JavaScript, TypeScript, SQL, R, MATLAB, SAS \\
+\textbf{Frameworks \& Libraries:} React, Flask, Node.js, REST APIs, Pandas, NumPy, Scikit-learn, PyTorch, TensorFlow, Matplotlib \\
+\textbf{Databases \& Cloud:} PostgreSQL, SQL Server, Oracle, Azure Synapse, Databricks, Delta Lake, AWS, Docker, Power BI \\
+\textbf{AI/ML \& Tools:} LLM APIs, OpenAI, Gemini, Claude, LangChain, CrewAI, MNE, Git, SQLAlchemy, Alembic, Pytest, Jest
+}
+\end{itemize}
+\vspace{-7pt}
+
+\section{Work Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{Enterprise Risk Analyst Intern}{May 2025 -- Dec. 2025}{Toyota Industries Commercial Finance, Inc. \textbar\ Python, SQL Server, Azure, Power BI}{Dallas, TX}
+\resumeItemListStart
+\resumeItem{Developed an end-to-end credit risk analytics pipeline integrating PayNet inquiries and internal loan servicing data through SQL Server ETL, borrower and asset feature engineering, Python modeling, and monthly reporting automation.}
+\resumeItem{Validated models with ROC/AUC, confusion matrices, and feature importance, achieving \textbf{AUC $>$ 0.82} across Class 8 trucks, trailers, and used-vehicle loans and improving high-risk case identification by approximately \textbf{3--4\%}.}
+\resumeItem{Conducted backtesting by comparing predicted risk buckets against observed outcomes, revealing up to \textbf{3.7$\times$ higher default rates} in high-risk groups and informing credit scorecard segmentation refinements.}
+\resumeItem{Automated recurring model refreshes and Power BI reporting workflows, reducing manual reporting effort by 10\% while supporting portfolio risk monitoring across truck, trailer, and used-vehicle segments.}
+\resumeItemListEnd
+
+\resumeSubheading{Financial Data Development Engineer -- Fraud Detection}{Jul. 2024 -- Aug. 2024}{Caitong Securities Ltd \textbar\ SQL, Oracle, Stored Procedures}{Hangzhou, China}
+\resumeItemListStart
+\resumeItem{Designed and optimized SQL-driven ETL pipelines processing \textbf{10M+ daily transactions} with window functions, subqueries, and stored procedures, improving extraction efficiency by 5\%.}
+\resumeItem{Implemented automated fraud-detection logic with parameterized thresholds and modular stored procedures, reducing false positives by 2\% for transaction-monitoring and AML-related workflows.}
+\resumeItem{Developed a customer risk scoring engine by integrating multiple transactional and behavioral data streams, enhancing fraud detection precision and financial data monitoring.}
+\resumeItemListEnd
+
+\resumeSubheading{Software Engineering Intern -- Customer Analytics}{Nov. 2023 -- Jun. 2024}{Joblogic-X Corporation \textbar\ Python, APIs, Git}{Dallas, TX (Hybrid)}
+\resumeItemListStart
+\resumeItem{Engineered a scalable data pipeline to scrape and process XHS social-media data and integrate it with transactional order systems for customer analytics.}
+\resumeItem{Implemented modular ranking and clustering algorithms in Python, generating reproducible customer-priority lists for marketing and engagement workflows.}
+\resumeItem{Integrated a KOC scoring module into Meet Fresh's customer-facing chatbot through REST APIs and maintained Git-based deployment workflows for reproducible updates.}
+\resumeItemListEnd
+
+\resumeSubheading{Data Scientist Assistant Intern -- Image Restoration}{Jul. 2023 -- Sep. 2023}{Software Engineering Center, Chinese Academy of Sciences \textbar\ TensorFlow, Cloud, GFPGAN}{Beijing, China}
+\resumeItemListStart
+\resumeItem{Deployed image restoration modules on Alibaba Cloud via SSH, implementing VAE loss, Gaussian filters, and LSGAN functions for scalable reconstruction workflows.}
+\resumeItem{Constructed a TensorFlow 2 CNN, partitioned 3.4k images into train/validation/test sets, and achieved \textbf{80\% accuracy} across 5 image categories.}
+\resumeItem{Integrated GFPGAN APIs for automated face restoration and color correction, reducing processing costs by 5\% and supporting model-comparison reporting.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Research Experience and Projects}
+\resumeSubHeadingListStart
+\resumeSubheading{Echo -- Interactive AI Voice Simulation System}{Jun. 2026 -- Present}{University of Texas at Austin \textbar\ Mentor: Prof. Bo Xie \textbar\ Next.js, TypeScript, OpenAI API}{Austin, TX}
+\resumeItemListStart
+\resumeItem{Built an event-driven voice simulation system that generates context-aware responses from user pauses, errors, skipped fields, and task switching using session state, trigger rules, browser TTS, and OpenAI APIs.}
+\resumeItem{Designed cooldown, interval, and event-priority logic to prevent repetitive playback and make voice feedback responsive to task state, interaction timing, and user behavior.}
+\resumeItem{Modularized prompt templates and event-trigger logic so new voice events and task types can be added without changing the core session controller.}
+\resumeItemListEnd
+
+\newpage
+
+\resumeSubheading{CodeAssist -- AI Feedback System \href{https://github.com/kiat/codeAssist}{\textbar\ GitHub}}{Aug. 2025 -- Present}{University of Texas at Austin \textbar\ Mentor: Prof. Kia Teymourian \textbar\ React, Flask, PostgreSQL, Docker}{Austin, TX}
+\resumeItemListStart
+\resumeItem{Built a full-stack AI feedback system for programming courses, connecting student code editing, file uploads, submissions, and chat-based AI feedback for debugging, complexity reasoning, implementation ideas, and test-case correctness.}
+\resumeItem{Developed Flask REST APIs and PostgreSQL models for AI feedback settings, instructor controls, request limits, cooldown policies, role-based access, JSON serialization, and Alembic-backed schema changes.}
+\resumeItem{Implemented LLM context filtering so assignment descriptions, student code, uploaded files, test cases, execution results, and student output are shared only when allowed by instructor-defined policies.}
+\resumeItem{Standardized provider workflows across OpenAI, Gemini, Claude, and local models, including model selection, API configuration, timeout handling, and assignment-level prompt behavior.}
+\resumeItem{Analyzed Docker-based autograder bottlenecks and scoped async grading with job status tracking, timing metrics, timeout handling, and isolated submission/result paths.}
+\resumeItemListEnd
+
+\resumeSubheading{Researcher \& TA -- Biological Data Analytics}{Jan. 2024 -- Dec. 2024}{University of Texas at Austin \textbar\ Mentor: Prof. Becca Young \textbar\ R, Linux, AWS, Docker}{Austin, TX}
+\resumeItemListStart
+\resumeItem{Processed and analyzed \textbf{250GB} of RNA-seq data using Linux, Docker, and AWS workflows, improving processing speed by 6\% and reducing storage costs by 5\%.}
+\resumeItem{Applied Salmon, RSEM, Trinity, and samtools for transcript quantification, achieving a \textbf{98.7\% mapping rate} and ensuring reproducibility across datasets.}
+\resumeItem{Performed Voom/Limma differential-expression analysis, identified 48 key genes across time-series samples, and automated normalization, PCA, and volcano-plot workflows in R/ggplot2.}
+\resumeItem{Collaborated as a teaching assistant to train incoming FRI students on reproducible RNA-seq pipelines and data literacy.}
+\resumeItemListEnd
+
+\resumeSubheading{FinChat -- AI-Powered Financial Analysis System}{Jan. 2023 -- May 2024}{Southern Methodist University \textbar\ Prof. Labiba Jahan \textbar\ Python, FinGPT, LangChain}{Dallas, TX (Remote Hybrid)}
+\resumeItemListStart
+\resumeItem{Built LLM workflows for financial report analysis by extracting and processing 100+ SEC filings from EDGAR into a structured data lake for metric extraction, trend detection, and company-level comparison.}
+\resumeItem{Implemented LangChain/CrewAI workflows for contextual financial interpretation, improving filing-analysis accuracy by 3\% and reducing manual review time for filing analysis.}
+\resumeItem{Collaborated with a cross-university research team to connect FinGPT-based retrieval, filing preprocessing, and financial-question workflows into a reusable analysis prototype.}
+\resumeItemListEnd
+
+\resumeSubheading{Machine Learning Research Assistant -- Neuroengineering Lab}{Jan. 2023 -- May 2024}{Remote \textbar\ Mentor: Dr. Kunqiang Qing \textbar\ Python, MATLAB, MNE}{Remote}
+\resumeItemListStart
+\resumeItem{Processed \textbf{35GB} of multimodal EEG/fNIRS data for signal cleaning, visualization, feature extraction, connectivity analysis, and statistical testing.}
+\resumeItem{Applied statistical tests and feature-extraction methods to evaluate cognitive impairment patterns and emotion-recognition signals across experimental conditions.}
+\resumeItem{Evaluated RF, SVM, KNN, and XGBoost models, contributing to peer-reviewed work in \textit{Frontiers in Neurology}, \textit{Frontiers in Neuroscience}, and IEEE ICIPCA.}
+\resumeItemListEnd
+
+\resumeSubheading{Kiwifruit Quality Grading Project -- Machine Learning Member}{Aug. 2022 -- May 2024}{Huazhong Agricultural University \textbar\ Mentor: Prof. Yan Tong \textbar\ Python, Computer Vision}{Wuhan, China (Hybrid)}
+\resumeItemListStart
+\resumeItem{Contributed to an automated fruit grading pipeline using color, texture, shape, and feature-fusion methods; benchmarked model variants and analyzed results for the ML methodology section.}
+\resumeItem{Compared feature combinations to improve grading accuracy and interpretation for research later published in \textit{Expert Systems with Applications}.}
+\resumeItem{Supported result interpretation for the published study by organizing feature-level evidence around image-based kiwifruit quality grading.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Leadership and Community}
+\resumeSubHeadingListStart
+\resumeSubheading{Volunteer -- Art From the Streets}{Jan. 2026 -- Present}{Community art programming for artists experiencing homelessness or housing insecurity}{Austin, TX}
+\resumeItemListStart
+\resumeItem{Supported event preparation, artwork organization, and visitor engagement for community exhibitions featuring artists experiencing homelessness or housing insecurity.}
+\resumeItem{Assisted volunteers and visitors during public art events, helping maintain a respectful and welcoming environment for participating artists and community guests.}
+\resumeItemListEnd
+
+\resumeSubheading{Leader -- Austin Chinese Campus Christian Fellowship}{Aug. 2023 -- Jun. 2026}{University of Texas at Austin}{Austin, TX}
+\resumeItemListStart
+\resumeItem{Organized weekly Bible studies, retreats, hiking trips, and cultural celebrations; coordinated transportation and scheduling to improve group communication and inclusion.}
+\resumeItem{Facilitated small-group discussions and welcomed new members through consistent event planning, follow-up communication, and peer support for students joining the group.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Publications}
+\vspace{-4pt}
+\begin{itemize}[leftmargin=0.16in,itemsep=1pt,topsep=1pt,label={}]
+\footnotesize{
+\item [1] \href{https://doi.org/10.1016/j.eswa.2025.129507}{Miao, H., Wang, Z., \textbf{\underline{Zhang, Y.}}, ... \& Tong, Y. (2025). New kiwifruit quality grading methods based on image multi-feature fusion and ResTNet model. \textit{Expert Systems with Applications}, 129507.}
+\item [2] \href{https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2024.1358167/full}{Xu, M., \textbf{\underline{Zhang, Y.}}, Zhang, Y., Liu, X., \& Qing, K. (2024). EEG biomarkers analysis in different cognitive impairment after stroke. \textit{Frontiers in Neurology}, 15, 1358167.}
+\item [3] \href{https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1269359/full}{\textbf{\underline{Zhang, Y.}}, Zhang, Y., Jiang, Z., Xu, M., \& Qing, K. (2023). The effect of EEG and fNIRS in digital therapy of Alzheimer's disease. \textit{Frontiers in Neuroscience}, 17, 1269359.}
+\item [4] \href{https://ieeexplore.ieee.org/abstract/document/10257784}{\textbf{\underline{Zhang, Y.}} (2023). EEG-Based on Emotion Recognition Using Machine Learning. \textit{IEEE ICIPCA}, 226--232.}
+\item [5] \href{https://clausiuspress.com/article/8423.html}{Li, D., Zhang, Z., \& \textbf{\underline{Zhang, Y.}} (2023). Public compassion under the mediation of suffering: Taking the videos of ``Second Uncle'' on social media as an example. \textit{Media and Communication Research}, 4(5), 46--58.}
+}
+\end{itemize}
+
+\end{document}
