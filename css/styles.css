@@ -395,7 +395,7 @@ li::marker {
 .painting-card {
   background:
     linear-gradient(180deg, rgba(57, 37, 31, 0.1), rgba(57, 37, 31, 0.84)),
-    url("../imgs/creative-painting.jpg") center / cover no-repeat;
+    url("../painting/painting-01.jpg") center 30% / cover no-repeat;
 }
 
 .creative-card span {
@@ -420,7 +420,7 @@ li::marker {
 }
 
 .resume-grid a {
-  flex: 1 1 220px;
+  flex: 0 1 280px;
 }
 
 .contact-section {
@@ -468,7 +468,7 @@ footer p {
 .painting-hero {
   background:
     linear-gradient(90deg, rgba(38, 28, 24, 0.86), rgba(38, 28, 24, 0.4)),
-    url("../imgs/gallery-painting-hero.jpg") center / cover no-repeat;
+    url("../painting/painting-01.jpg") center 30% / cover no-repeat;
 }
 
 .gallery-hero-inner {
