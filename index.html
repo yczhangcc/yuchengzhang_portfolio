@@ -31,13 +31,6 @@
         <img src="imgs/photo.jpg" alt="Yucheng Cecilia Zhang" class="profile-pic">
         <p class="eyebrow">AI / ML Research Engineer</p>
         <h1>Yucheng (Cecilia) Zhang</h1>
-        <p class="hero-copy">
-            I like problems that push back. Hand me something messy, like loan portfolios,
-            EEG signals, or a pile of student code, and I'll want to take it apart, figure out
-            what's really going on, and build something new that actually works.
-            Math taught me to analyze, engineering lets me build, and curiosity keeps
-            pulling me into fields I didn't expect to love.
-        </p>
         <div class="hero-actions">
             <a href="https://www.linkedin.com/in/yczcecilia" target="_blank" rel="noopener noreferrer" class="button">LinkedIn</a>
             <a href="https://scholar.google.com/citations?user=Stx_NRQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="button">Google Scholar</a>
@@ -50,8 +43,8 @@
 
 <nav aria-label="Primary navigation">
     <a href="#about">About</a>
-    <a href="#research">Research</a>
     <a href="#work">Work</a>
+    <a href="#research">Research</a>
     <a href="#contact">Contact</a>
     <a href="#creative" class="nav-secondary">Photography &amp; Painting</a>
 </nav>
@@ -87,100 +80,6 @@
                 <p><strong>Technical base:</strong> Python, SQL, React, Flask, PostgreSQL, Docker, Scikit-learn, TensorFlow, PyTorch.</p>
                 <p><strong>Also:</strong> photography, painting, and writing for fun on <a href="https://medium.com/@CeciliaZ" target="_blank" rel="noopener noreferrer">Medium</a>.</p>
             </div>
-        </div>
-    </section>
-
-    <section id="research" class="section">
-        <div class="section-kicker">Research</div>
-        <h2>The questions I keep coming back to: bodies, brains, and what models actually see.</h2>
-
-        <div class="research-list">
-            <article class="work-card featured">
-                <div class="meta">Northwestern University | SPICE Lab | Advisor: Prof. Karan Ahuja | Aug. 2026 - Present</div>
-                <h3>Graduate Research Assistant - Human Motion from Wearable Sensors</h3>
-                <p>
-                    How much can six small motion sensors (IMUs) tell us about a whole body's pose?
-                    I study how far more data takes a pose model, and where it stops helping.
-                </p>
-                <ul>
-                    <li>Built a unified pipeline that turns ~1,490 hours of human motion from 8 datasets (optical mocap, Xsens, multi-view video) into SMPL bodies and simulated 6-IMU signals, with person-level train/test splits to prevent leakage.</li>
-                    <li>Ran a 60-run data-scaling study of the DynaIP pose model (5 data sizes x 4 dataset groups x 3 seeds); training on combined data cut simulated error to 3.5 cm MPJPE vs. 6.2-7.2 cm for the best single-dataset models.</li>
-                    <li>Found that the sim-to-real gap is the real bottleneck: error on real IMUs stayed at 10-14 cm regardless of data size, traced to high-frequency sensor energy that simulation misses (8-40% vs. 0.4-3% above 5 Hz).</li>
-                </ul>
-                <span class="card-tools">Python, PyTorch, Slurm</span>
-            </article>
-
-            <article class="work-card featured">
-                <div class="meta">Northwestern University | with Rahul Islam &amp; Prof. Karan Ahuja | 2026</div>
-                <h3>Synchrony Is Not Readability - Evaluating Lip-Sync Metrics</h3>
-                <p>
-                    A lip-sync video can score well on the standard metric and still be impossible to
-                    lip-read. We tested whether the metric everyone reports actually measures what matters.
-                </p>
-                <ul>
-                    <li>Showed that SyncNet confidence (LSE-C), the standard lip-sync metric, does not predict whether translated speech is readable from the lips.</li>
-                    <li>Benchmarked 6 lip-sync generators on translated visual speech in English and Mandarin.</li>
-                    <li>Second author on the paper, currently under review at ACL Rolling Review.</li>
-                </ul>
-                <a href="https://openreview.net/forum?id=CW7dhFQOSA" target="_blank" rel="noopener noreferrer">OpenReview</a>
-            </article>
-
-            <article class="work-card featured">
-                <div class="meta">Huazhong Agricultural University | Mentor: Prof. Yan Tong | Wuhan, China (Hybrid) | Aug. 2022 - May 2025</div>
-                <h3>Kiwifruit Quality Grading - Computer Vision &amp; Machine Learning</h3>
-                <p>
-                    Can a camera grade fruit as reliably as a trained eye? I built the hand-crafted
-                    feature baseline that the deep model had to beat.
-                </p>
-                <ul>
-                    <li>Engineered a 53-dimensional feature set (12 color, 16 texture, 12 shape, 13 defect features) from 1,701 labeled kiwifruit images across 3 quality classes.</li>
-                    <li>Checked feature independence with Pearson correlation (&lt; 0.5) and mutual information, and ranked features with permutation importance.</li>
-                    <li>Benchmarked 6 classifiers with 5-fold cross-validation (best: Logistic Regression, 85.7% macro-F1), and supported validation of ResTNet, a hybrid ResNet + Vision Transformer that reached 99.5% macro-F1.</li>
-                </ul>
-                <a href="https://doi.org/10.1016/j.eswa.2025.129507" target="_blank" rel="noopener noreferrer">Expert Systems with Applications</a>
-            </article>
-
-            <article class="work-card featured">
-                <div class="meta">UT Austin | Mentor: Prof. Becca Young | Jan. 2024 - Dec. 2024</div>
-                <h3>Researcher &amp; TA - Biological Data Analytics</h3>
-                <p>
-                    Which genes switch on over time, and how sure can we be? Large-scale RNA-seq
-                    analysis with a focus on statistics you can trust.
-                </p>
-                <ul>
-                    <li>Processed 250GB of RNA-seq data with Linux, Docker, and AWS, and ran Salmon, RSEM, Trinity, and samtools for transcript quantification at a 98.7% mapping rate.</li>
-                    <li>Ran Voom + Limma differential-expression analysis with permutation-based FDR, identifying 48 key genes across time-series samples.</li>
-                    <li>Automated normalization, PCA, and volcano-plot workflows in R/ggplot2, and taught incoming students reproducible RNA-seq pipelines as a TA.</li>
-                </ul>
-                <span class="card-tools">R, Linux, Docker, AWS</span>
-            </article>
-
-            <article class="work-card featured">
-                <div class="meta">Neuroengineering Lab | Mentor: Dr. Kunqiang Qing | Remote | Jan. 2023 - May 2024</div>
-                <h3>Machine Learning Research Assistant - EEG &amp; fNIRS</h3>
-                <p>
-                    Can brain signals show how cognition changes after a stroke, or what someone is
-                    feeling? This is where I first fell for research, and it led to three papers.
-                </p>
-                <ul>
-                    <li>Preprocessed 35GB of clinical EEG/fNIRS recordings from 32+ subjects: ICA artifact removal, power spectral density via FFT, and functional connectivity features.</li>
-                    <li>Co-authored a study comparing healthy controls with mild, moderate, and severe post-stroke cognitive impairment, using ANOVA with permutation testing and Bonferroni correction (p &lt; 0.001).</li>
-                    <li>First-authored a systematic review of EEG and fNIRS for Alzheimer's assessment and therapy, and built an EEG emotion-recognition pipeline benchmarking RF, SVM, KNN, and XGBoost (sole-author IEEE paper).</li>
-                </ul>
-                <a href="https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2024.1358167/full" target="_blank" rel="noopener noreferrer">Frontiers in Neurology</a>
-            </article>
-        </div>
-
-        <div class="pub-block">
-            <h3>Publications</h3>
-            <ol class="pub-list">
-                <li>Jin, Z., <strong>Zhang, Y.</strong>, Islam, R., &amp; Ahuja, K. (2026). Synchrony is not readability: Evaluating lip-sync metrics on translated visual speech in English and Mandarin. <em>ACL ARR</em> (under review). <a href="https://openreview.net/forum?id=CW7dhFQOSA" target="_blank" rel="noopener noreferrer">OpenReview</a></li>
-                <li>Miao, H., Wang, Z., <strong>Zhang, Y.</strong>, ... &amp; Tong, Y. (2026). New kiwifruit quality grading methods based on image multi-feature fusion and ResTNet model. <em>Expert Systems with Applications</em>, 297, 129507. <a href="https://doi.org/10.1016/j.eswa.2025.129507" target="_blank" rel="noopener noreferrer">DOI</a></li>
-                <li>Xu, M., <strong>Zhang, Y.</strong>, Zhang, Y., Liu, X., &amp; Qing, K. (2024). EEG biomarkers analysis in different cognitive impairment after stroke: An exploration study. <em>Frontiers in Neurology</em>, 15, 1358167. <a href="https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2024.1358167/full" target="_blank" rel="noopener noreferrer">Link</a></li>
-                <li><strong>Zhang, Y.</strong>, Zhang, Y., Jiang, Z., Xu, M., &amp; Qing, K. (2023). The effect of EEG and fNIRS in the digital assessment and digital therapy of Alzheimer's disease: A systematic review. <em>Frontiers in Neuroscience</em>, 17, 1269359. <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1269359/full" target="_blank" rel="noopener noreferrer">Link</a></li>
-                <li><strong>Zhang, Y.</strong> (2023). EEG-Based on Emotion Recognition Using Machine Learning. In <em>IEEE ICIPCA</em> (pp. 226-232). <a href="https://ieeexplore.ieee.org/abstract/document/10257784" target="_blank" rel="noopener noreferrer">IEEE</a></li>
-                <li>Li, D., Zhang, Z., &amp; <strong>Zhang, Y.</strong> (2023). Public compassion under the mediation of suffering: Taking the videos of "Second Uncle" on social media as an example. <em>Media and Communication Research</em>, 4(5), 46-58. <a href="https://clausiuspress.com/article/8423.html" target="_blank" rel="noopener noreferrer">Link</a></li>
-            </ol>
         </div>
     </section>
 
@@ -246,6 +145,85 @@
                 </div>
                 <p>Forecast daily demand for 19+ dishes with a Prophet + XGBoost pipeline tuned with Optuna (R&sup2; up to 0.98, MAPE as low as 7.4% on held-out data), and scored social-media influencers from 500+ posts, finding image posts drove 5.6x more engagement than video.</p>
             </article>
+        </div>
+    </section>
+
+    <section id="research" class="section">
+        <div class="section-kicker">Research</div>
+        <h2>The questions I keep coming back to: bodies, brains, and what models actually see.</h2>
+
+        <div class="research-list">
+            <article class="work-card featured">
+                <div class="meta">Northwestern University | SPICE Lab | Advisor: Prof. Karan Ahuja | Aug. 2026 - Present</div>
+                <h3>Graduate Research Assistant - Human Motion from Wearable Sensors</h3>
+                <p>
+                    How much can six small motion sensors (IMUs) tell us about a whole body's pose?
+                    I study how far more data takes a pose model, and where it stops helping.
+                </p>
+                <ul>
+                    <li>Built a unified pipeline that turns ~1,490 hours of human motion from 8 datasets (optical mocap, Xsens, multi-view video) into SMPL bodies and simulated 6-IMU signals, with person-level train/test splits to prevent leakage.</li>
+                    <li>Ran a 60-run data-scaling study of the DynaIP pose model (5 data sizes x 4 dataset groups x 3 seeds); training on combined data cut simulated error to 3.5 cm MPJPE vs. 6.2-7.2 cm for the best single-dataset models.</li>
+                    <li>Found that the sim-to-real gap is the real bottleneck: error on real IMUs stayed at 10-14 cm regardless of data size, traced to high-frequency sensor energy that simulation misses (8-40% vs. 0.4-3% above 5 Hz).</li>
+                </ul>
+                <span class="card-tools">Python, PyTorch, Slurm</span>
+            </article>
+
+            <article class="work-card featured">
+                <div class="meta">Huazhong Agricultural University | Mentor: Prof. Yan Tong | Wuhan, China (Hybrid) | Aug. 2022 - May 2025</div>
+                <h3>Kiwifruit Quality Grading - Computer Vision &amp; Machine Learning</h3>
+                <p>
+                    Can a camera grade fruit as reliably as a trained eye? I built the hand-crafted
+                    feature baseline that the deep model had to beat.
+                </p>
+                <ul>
+                    <li>Engineered a 53-dimensional feature set (12 color, 16 texture, 12 shape, 13 defect features) from 1,701 labeled kiwifruit images across 3 quality classes.</li>
+                    <li>Checked feature independence with Pearson correlation (&lt; 0.5) and mutual information, and ranked features with permutation importance.</li>
+                    <li>Benchmarked 6 classifiers with 5-fold cross-validation (best: Logistic Regression, 85.7% macro-F1), and supported validation of ResTNet, a hybrid ResNet + Vision Transformer that reached 99.5% macro-F1.</li>
+                </ul>
+                <a href="https://doi.org/10.1016/j.eswa.2025.129507" target="_blank" rel="noopener noreferrer">Expert Systems with Applications</a>
+            </article>
+
+            <article class="work-card featured">
+                <div class="meta">UT Austin | Mentor: Prof. Becca Young | Jan. 2024 - Dec. 2024</div>
+                <h3>Researcher &amp; TA - Biological Data Analytics</h3>
+                <p>
+                    Which genes switch on over time, and how sure can we be? Large-scale RNA-seq
+                    analysis with a focus on statistics you can trust.
+                </p>
+                <ul>
+                    <li>Processed 250GB of RNA-seq data with Linux, Docker, and AWS, and ran Salmon, RSEM, Trinity, and samtools for transcript quantification at a 98.7% mapping rate.</li>
+                    <li>Ran Voom + Limma differential-expression analysis with permutation-based FDR, identifying 48 key genes across time-series samples.</li>
+                    <li>Automated normalization, PCA, and volcano-plot workflows in R/ggplot2, and taught incoming students reproducible RNA-seq pipelines as a TA.</li>
+                </ul>
+                <span class="card-tools">R, Linux, Docker, AWS</span>
+            </article>
+
+            <article class="work-card featured">
+                <div class="meta">Neuroengineering Lab | Mentor: Dr. Kunqiang Qing | Remote | Jan. 2023 - May 2024</div>
+                <h3>Machine Learning Research Assistant - EEG &amp; fNIRS</h3>
+                <p>
+                    Can brain signals show how cognition changes after a stroke, or what someone is
+                    feeling? This is where I first fell for research, and it led to three papers.
+                </p>
+                <ul>
+                    <li>Preprocessed 35GB of clinical EEG/fNIRS recordings from 32+ subjects: ICA artifact removal, power spectral density via FFT, and functional connectivity features.</li>
+                    <li>Co-authored a study comparing healthy controls with mild, moderate, and severe post-stroke cognitive impairment, using ANOVA with permutation testing and Bonferroni correction (p &lt; 0.001).</li>
+                    <li>First-authored a systematic review of EEG and fNIRS for Alzheimer's assessment and therapy, and built an EEG emotion-recognition pipeline benchmarking RF, SVM, KNN, and XGBoost (sole-author IEEE paper).</li>
+                </ul>
+                <a href="https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2024.1358167/full" target="_blank" rel="noopener noreferrer">Frontiers in Neurology</a>
+            </article>
+        </div>
+
+        <div class="pub-block">
+            <h3>Publications</h3>
+            <ol class="pub-list">
+                <li>Jin, Z., <strong>Zhang, Y.</strong>, Islam, R., &amp; Ahuja, K. (2026). Synchrony is not readability: Evaluating lip-sync metrics on translated visual speech in English and Mandarin. <em>ACL ARR</em> (under review). <a href="https://openreview.net/forum?id=CW7dhFQOSA" target="_blank" rel="noopener noreferrer">OpenReview</a></li>
+                <li>Miao, H., Wang, Z., <strong>Zhang, Y.</strong>, ... &amp; Tong, Y. (2026). New kiwifruit quality grading methods based on image multi-feature fusion and ResTNet model. <em>Expert Systems with Applications</em>, 297, 129507. <a href="https://doi.org/10.1016/j.eswa.2025.129507" target="_blank" rel="noopener noreferrer">DOI</a></li>
+                <li>Xu, M., <strong>Zhang, Y.</strong>, Zhang, Y., Liu, X., &amp; Qing, K. (2024). EEG biomarkers analysis in different cognitive impairment after stroke: An exploration study. <em>Frontiers in Neurology</em>, 15, 1358167. <a href="https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2024.1358167/full" target="_blank" rel="noopener noreferrer">Link</a></li>
+                <li><strong>Zhang, Y.</strong>, Zhang, Y., Jiang, Z., Xu, M., &amp; Qing, K. (2023). The effect of EEG and fNIRS in the digital assessment and digital therapy of Alzheimer's disease: A systematic review. <em>Frontiers in Neuroscience</em>, 17, 1269359. <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1269359/full" target="_blank" rel="noopener noreferrer">Link</a></li>
+                <li><strong>Zhang, Y.</strong> (2023). EEG-Based on Emotion Recognition Using Machine Learning. In <em>IEEE ICIPCA</em> (pp. 226-232). <a href="https://ieeexplore.ieee.org/abstract/document/10257784" target="_blank" rel="noopener noreferrer">IEEE</a></li>
+                <li>Li, D., Zhang, Z., &amp; <strong>Zhang, Y.</strong> (2023). Public compassion under the mediation of suffering: Taking the videos of "Second Uncle" on social media as an example. <em>Media and Communication Research</em>, 4(5), 46-58. <a href="https://clausiuspress.com/article/8423.html" target="_blank" rel="noopener noreferrer">Link</a></li>
+            </ol>
         </div>
     </section>
 
