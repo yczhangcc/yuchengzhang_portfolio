@@ -296,6 +296,8 @@ nav a:hover {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 0.78fr);
   column-gap: 28px;
+  grid-template-rows: auto auto auto 1fr;
+  align-items: start;
   border-color: var(--ink);
   border-width: 1px;
 }
@@ -329,6 +331,60 @@ li {
 
 li::marker {
   color: var(--sunflower);
+}
+
+/* Research section */
+.research-list {
+  display: grid;
+  gap: 18px;
+}
+
+.card-tools {
+  grid-column: 1;
+  align-self: start;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.pub-block {
+  margin-top: 46px;
+}
+
+.pub-block h3 {
+  font-size: 1.3rem;
+  margin-bottom: 14px;
+}
+
+.pub-list {
+  margin: 0;
+  padding-left: 22px;
+  display: grid;
+  gap: 10px;
+}
+
+.pub-list li {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.93rem;
+}
+
+.pub-list li::marker {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.pub-list strong {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--sunflower);
+  text-underline-offset: 3px;
+}
+
+.pub-list a {
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .more-list {
